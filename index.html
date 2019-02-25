@@ -5,12 +5,12 @@
     <title>Soothe Sounds</title>
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAJiUoACAfIwAfHiEAJSQmAB4dHwBFREYAHx0iAB0cIAAfHiIAHx4gAB8dIwAgHyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAcLCQAAAAAAAAAAAAAACQkJCQkFAAAAAAAAAAAAAAEJCQkJCQYAAAAAAAAAAAAJCQkJCQkJAAAAAAAAAAAAAAkICgUFCQAAAAAAAAAAAAAAAAAACQkAAAAAAAAAAAAAAAAAAAkJAAAAAAAAAAAAAAAAAAAJCQAAAAAAAAAAAAAAAAAACQIAAAAAAAAAAAAAAAAAAAkCAAAEAAAAAAAAAAAAAAAJCQAACQAAAAAAAAAAAAAACQkACQkAAAAAAAAAAAAAAAkJAwoAAAAAAAAAAAAAAAAJCQUAAAAAAAAAAAAAAAAACQkAAAAAAAAAAAAAAAAAAAkJAAAAAAAAAOH/AADA/wAAwH8AAMB/AADgfwAA/n8AAP5/AAD+fwAA/n8AAP5vAAD+bwAA/k8AAP4fAAD+PwAA/n8AAP5/AAA=" rel="icon" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Forum|Poiret+One|Quattrocento+Sans|Quicksand|Raleway+Dots|PT+Sans" rel="stylesheet">
-   
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body {
-           font-family: 'Quicksand', sans-serif;
+            font-family: 'Quicksand', sans-serif;
             user-select: none;
+            overflow: hidden;
         }
 
         header {
@@ -35,7 +35,7 @@
             position: absolute;
             top: 14%;
             left: 0%;
-            width: 25%;
+            width: 15%;
             height: 80%;
             margin-right: 1em;
             list-style: none;
@@ -198,26 +198,31 @@
 
 
         }
+            #stop-btn {
+          
+            display:none;
 
-        #record {
-            left: 10%;
 
-            width: 4vw;
-            height: 4vw;
-            border-radius: 100%;
 
         }
+  
+
+     
+         .tooltip{
+            font-size:1em;
+            position:relative;
+            text-align: center;
+            left:50%;
+            top:100%;
+            transform: translate(-50%,-50%);
+            display:none;
+        }
+        
 
 
         #download {}
 
-        #stop {
-            width: 4vw;
-            height: 4vw;
-
-
-
-        }
+    
 
 
 
@@ -281,7 +286,7 @@
         .row {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-         
+
 
             background-color: aquamarine;
             cursor: pointer;
@@ -339,7 +344,7 @@
             .controls {
                 top: 92%;
 
-                height: 5%;
+               
             }
 
             .material-icons {
@@ -361,9 +366,11 @@
     <div id="intro" class="title">
         <h1>Welcome</h1>
         <div id="listen" class="button">Listen <i class="material-icons">
-hearing
-</i></div>&nbsp;
-        <div id="create" class="button">Create</div>
+                hearing
+            </i></div>&nbsp;
+        <div id="create" class="button"><i class="material-icons">
+                create
+            </i>Create</div>
     </div>
 
     <div id="listen-page">
@@ -483,9 +490,14 @@ hearing
         </main>
         <div class="controls">
 
-            <div id="record" class="control-button"><i class="material-icons">
+            <div id="record-stop" class="control-button"><i class="material-icons" id="record-btn">
                     fiber_manual_record
+                </i>
+             <div class="control-button"><i class="material-icons" id="stop-btn">
+                    stop
                 </i></div>
+            </div> 
+            
             <div id="play-pause" class="control-button"><i class="material-icons" id="play-btn">
                     play_circle_outline
                 </i>
@@ -493,9 +505,7 @@ hearing
                         pause_circle_outline
                     </i></div>
             </div>
-            <div id="stop" class="control-button"><i class="material-icons">
-                    stop
-                </i></div>
+           
             <div id="download" class="control-button"><i class="material-icons">
                     arrow_downward
                 </i></div>
@@ -661,6 +671,13 @@ hearing
                 $("#pause-btn").toggle();
 
             });
+            $("#record-stop").click(function(){
+                $("#record-btn").toggle();
+                $("#stop-btn").toggle();
+            });
+   
+
+
 
 
 
