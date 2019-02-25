@@ -156,7 +156,7 @@
         #listen-page {
             display: grid;
             grid-template-columns: 100px 100px 100px;
-            grid-gap: 10px;
+            grid-gap: 1em;
             display: none;
 
 
@@ -246,16 +246,18 @@
 
         #playlist {
             position: absolute;
+            margin-top: 1em;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80%;
-            height: 80%;
+            width: 90%;
+            height: 75%;
             display: grid;
-            background-color: #ffe0ff;
+            background-color: #bbdcfa;
             text-align: center;
             border-radius: 10px;
             align-items: center;
+            padding: 1em;
 
             grid-template-columns: 1fr 1fr 1fr;
             grid-row-gap: 1em;
@@ -269,13 +271,15 @@
         }
 
         .box {
-            width: 100%;
+            width: 90%;
             height: auto;
+            align-items: center;
         }
 
         .row {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 1em;
 
             background-color: aquamarine;
             cursor: pointer;
@@ -371,12 +375,12 @@
             </nav>
         </header>
         <div id="playlist">
-            <div class="box" id="box1"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23ffe0ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box2"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23ffe0ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box3">section 3</div>
-            <div class="box" id="box4">section 4</div>
-            <div class="box" id="box5">section 5</div>
-            <div class="box" id="box6">section 6</div>
+            <div class="box" id="box1"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box2"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box3"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box4"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box5"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box6"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
         </div>
 
     </div>
