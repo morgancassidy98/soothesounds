@@ -11,6 +11,7 @@
             font-family: 'Quicksand', sans-serif;
             user-select: none;
             overflow: hidden;
+
         }
 
         header {
@@ -198,31 +199,27 @@
 
 
         }
-            #stop-btn {
-          
-            display:none;
+
+        #stop-btn {
+
+            display: none;
 
 
 
         }
-  
 
-     
-         .tooltip{
-            font-size:1em;
-            position:relative;
-            text-align: center;
-            left:50%;
-            top:100%;
-            transform: translate(-50%,-50%);
-            display:none;
+
+
+        .tooltip {
+            display: none;
+
         }
-        
+
 
 
         #download {}
 
-    
+
 
 
 
@@ -318,6 +315,21 @@
             opacity: .1;
         }
 
+        #day-night {
+            position: absolute;
+            top: 2%;
+            left: 90%;
+            cursor: pointer;
+            z-index: 2;
+
+        }
+
+        #day-night i {
+            color: black;
+
+        }
+
+
 
 
         @media only screen and (max-width: 1000px) {
@@ -344,7 +356,7 @@
             .controls {
                 top: 92%;
 
-               
+
             }
 
             .material-icons {
@@ -356,12 +368,28 @@
 
             }
 
+            .daymode i {
+                color: black;
+
+            }
+
+            .nightmode i {
+                color: white;
+            }
+
 
         }
     </style>
 </head>
 
 <body>
+    <div id="day-night" class="daymode">
+        <div id="day"><i class="material-icons">
+                wb_sunny
+            </i></div>
+
+    </div>
+
 
     <div id="intro" class="title">
         <h1>Welcome</h1>
@@ -373,7 +401,7 @@
             </i>Create</div>
     </div>
 
-    <div id="listen-page">
+    <!--<div id="listen-page">
         <header>
             <h1>Soothe Sounds</h1>
 
@@ -394,7 +422,7 @@
             <div class="box" id="box6"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
         </div>
 
-    </div>
+    </div>-->
 
 
 
@@ -493,22 +521,25 @@
             <div id="record-stop" class="control-button"><i class="material-icons" id="record-btn">
                     fiber_manual_record
                 </i>
-             <div class="control-button"><i class="material-icons" id="stop-btn">
-                    stop
-                </i></div>
-            </div> 
-            
+
+                <div class="control-button"><i class="material-icons" id="stop-btn">
+                        stop
+                    </i></div>
+
+            </div>
+
             <div id="play-pause" class="control-button"><i class="material-icons" id="play-btn">
                     play_circle_outline
                 </i>
+
                 <div class="control-button"><i class="material-icons" id="pause-btn">
                         pause_circle_outline
                     </i></div>
             </div>
-           
+
             <div id="download" class="control-button"><i class="material-icons">
                     arrow_downward
-                </i></div>
+                </i><span id="downloadText" class="tooltip">download</span></div>
 
 
         </div>
@@ -528,200 +559,208 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $(".title").hide();
-            $(".title").fadeIn(3000);
+                    $(".title").hide();
+                    $(".title").fadeIn(3000);
 
 
-            $("#melody").click(function() {
-                $("#melody div").show();
-                $("#water div").hide();
-                $("#drum div").hide();
-                $("#synth div").hide();
+                    $("#melody").click(function() {
+                        $("#melody div").show();
+                        $("#water div").hide();
+                        $("#drum div").hide();
+                        $("#synth div").hide();
 
-            });
-            $("#melody").mouseover(function() {
-                $("#melody div").toggle();
-                $("#water div").hide();
-                $("#drum div").hide();
-                $("#synth div").hide();
+                    });
+                    $("#melody").mouseover(function() {
+                        $("#melody div").toggle();
+                        $("#water div").hide();
+                        $("#drum div").hide();
+                        $("#synth div").hide();
 
-            });
-            $("#melody").mouseout(function() {
-                $("#melody div").hide();
-                $("#water div").hide();
-                $("#drum div").hide();
-                $("#synth div").hide();
+                    });
+                    $("#melody").mouseout(function() {
+                        $("#melody div").hide();
+                        $("#water div").hide();
+                        $("#drum div").hide();
+                        $("#synth div").hide();
 
-            });
-            $("#water").click(function() {
-                $("#melody div").hide();
-                $("#drum div").hide();
-                $("#water div").show();
-                $("#synth div").hide();
+                    });
+                    $("#water").click(function() {
+                        $("#melody div").hide();
+                        $("#drum div").hide();
+                        $("#water div").show();
+                        $("#synth div").hide();
 
-            });
+                    });
 
-            $("#water").mouseover(function() {
-                $("#melody div").hide()
-                $("#drum div").hide();
-                $("#synth div").hide();
+                    $("#water").mouseover(function() {
+                        $("#melody div").hide()
+                        $("#drum div").hide();
+                        $("#synth div").hide();
 
-                $("#water div").toggle();
+                        $("#water div").toggle();
 
-            });
-            $("#water").mouseout(function() {
-                $("#melody div").hide();
-                $("#drum div").hide();
-                $("#synth div").hide();
+                    });
+                    $("#water").mouseout(function() {
+                        $("#melody div").hide();
+                        $("#drum div").hide();
+                        $("#synth div").hide();
 
-                $("#water div").hide();
+                        $("#water div").hide();
 
-            });
-            $("#drum").click(function() {
-                $("#drum div").show();
-                $("#water div").hide();
-                $("#melody div").hide();
-                $("#synth div").hide();
-
-
-            });
-            $("#drum").mouseover(function() {
-                $("#drum div").toggle();
-                $("#water div").hide();
-                $("#melody div").hide();
-                $("#synth div").hide();
+                    });
+                    $("#drum").click(function() {
+                        $("#drum div").show();
+                        $("#water div").hide();
+                        $("#melody div").hide();
+                        $("#synth div").hide();
 
 
-            });
-            $("#drum").mouseout(function() {
-                $("#drum div").hide();
-                $("#water div").hide();
-                $("#melody div").hide()
-                $("#synth div").hide();
+                    });
+                    $("#drum").mouseover(function() {
+                        $("#drum div").toggle();
+                        $("#water div").hide();
+                        $("#melody div").hide();
+                        $("#synth div").hide();
 
 
-            });
-            $("#synth").mouseover(function() {
-                $("#synth div").toggle();
-                $("#water div").hide();
-                $("#melody div").hide()
-                $("#drum div").hide();
+                    });
+                    $("#drum").mouseout(function() {
+                        $("#drum div").hide();
+                        $("#water div").hide();
+                        $("#melody div").hide()
+                        $("#synth div").hide();
 
 
-            });
-            $("#synth").mouseout(function() {
-                $("#synth div").hide();
-                $("#water div").hide();
-                $("#melody div").hide()
-                $("#drum div").hide();
+                    });
+                    $("#synth").mouseover(function() {
+                        $("#synth div").toggle();
+                        $("#water div").hide();
+                        $("#melody div").hide()
+                        $("#drum div").hide();
 
 
-            });
-            $("#listen").click(function() {
-                $(".title").hide();
-                $("#listen-page").show();
-                $("#listen-nav").css("background-color", "#e0ffff");
-                $("#listen-nav-2").css("background-color", "#e0ffff");
-
-            });
-            $("#create").click(function() {
-                $(".title").hide();
-                $("#create-page").show();
-                $("#create-nav").css("background-color", "#e0ffff");
-                $("#create-nav-2").css("background-color", "#e0ffff");
+                    });
+                    $("#synth").mouseout(function() {
+                        $("#synth div").hide();
+                        $("#water div").hide();
+                        $("#melody div").hide()
+                        $("#drum div").hide();
 
 
-            });
-            $("#listen-nav").click(function() {
-                $("#listen-page").show();
-                $("#create-page").hide();
-                $("#create-nav").css("background-color", "white");
-                $("#create-nav-2").css("background-color", "white");
-                $(this).css("background-color", "#e0ffff");
-                $("#listen-nav-2").css("background-color", "#e0ffff");
-            });
-            $("#listen-nav-2").click(function() {
-                $("#listen-page").show();
-                $("#create-page").hide();
-                $("#create-nav-2").css("background-color", "white");
-                $("#create-nav").css("background-color", "white");
-                $(this).css("background-color", "#e0ffff");
-                $("#listen-nav").css("background-color", "#e0ffff");
-            });
-            $("#create-nav").click(function() {
-                $("#listen-page").hide();
-                $("#create-page").show();
-                $("#listen-nav").css("background-color", "white");
-                $("#listen-nav-2").css("background-color", "white");
-                $(this).css("background-color", "#e0ffff");
-                $("#create-nav-2").css("background-color", "#e0ffff")
-            });
-            $("#create-nav-2").click(function() {
-                $("#listen-page").hide();
-                $("#create-page").show();
-                $("#listen-nav-2").css("background-color", "white");
-                $("#listen-nav").css("background-color", "white");
+                    });
+                    $("#listen").click(function() {
+                        $(".title").hide();
+                        $("#listen-page").show();
+                        $("#listen-nav").css("background-color", "#e0ffff");
+                        $("#listen-nav-2").css("background-color", "#e0ffff");
 
-                $(this).css("background-color", "#e0ffff");
-                $("#create-nav").css("background-color", "#e0ffff");
-            });
-
-            $("#play-pause").click(function() {
-                $("#play-btn").toggle();
-                $("#pause-btn").toggle();
-
-            });
-            $("#record-stop").click(function(){
-                $("#record-btn").toggle();
-                $("#stop-btn").toggle();
-            });
-   
+                    });
+                    $("#create").click(function() {
+                        $(".title").hide();
+                        $("#create-page").show();
+                        $("#create-nav").css("background-color", "#e0ffff");
+                        $("#create-nav-2").css("background-color", "#e0ffff");
 
 
+                    });
+                    $("#listen-nav").click(function() {
+                        $("#listen-page").show();
+                        $("#create-page").hide();
+                        $("#create-nav").css("background-color", "white");
+                        $("#create-nav-2").css("background-color", "white");
+                        $(this).css("background-color", "#e0ffff");
+                        $("#listen-nav-2").css("background-color", "#e0ffff");
+                    });
+                    $("#listen-nav-2").click(function() {
+                        $("#listen-page").show();
+                        $("#create-page").hide();
+                        $("#create-nav-2").css("background-color", "white");
+                        $("#create-nav").css("background-color", "white");
+                        $(this).css("background-color", "#e0ffff");
+                        $("#listen-nav").css("background-color", "#e0ffff");
+                    });
+                    $("#create-nav").click(function() {
+                        $("#listen-page").hide();
+                        $("#create-page").show();
+                        $("#listen-nav").css("background-color", "white");
+                        $("#listen-nav-2").css("background-color", "white");
+                        $(this).css("background-color", "#e0ffff");
+                        $("#create-nav-2").css("background-color", "#e0ffff")
+                    });
+                    $("#create-nav-2").click(function() {
+                        $("#listen-page").hide();
+                        $("#create-page").show();
+                        $("#listen-nav-2").css("background-color", "white");
+                        $("#listen-nav").css("background-color", "white");
 
+                        $(this).css("background-color", "#e0ffff");
+                        $("#create-nav").css("background-color", "#e0ffff");
+                    });
 
+                    $("#play-pause").click(function() {
+                        $("#play-btn").toggle();
+                        $("#pause-btn").toggle();
 
+                    });
+                    $("#record-stop").click(function() {
+                        $("#record-btn").toggle();
+                        $("#stop-btn").toggle();
 
-
-
-        });
-
-
-
-
-
-
-
-
-
-        /*font ideas:
-                    font-family: 'Quattrocento Sans', sans-serif;
+                    });
+                    $("#day-night").click(function() {
+                        $("#day-night i").css("color", "white");
+                        $("body").css("background-color", "navy");
+                        $("#day-night").addClass("nightmode");
                 
-                    font-family: 'Forum', cursive;
-                 
-                    font-family: 'Quicksand', sans-serif;
-                    
-                    NIGHT MODE:
-                    font-family: 'Raleway Dots', cursive
 
-        //color ideas:
-        #bbfaf8   aqua
-        #bbdcfa   blue
-        #bbbdfa   purple
-        #d9bbfa   lavendar
-        #f8bbfa   pink
-        #fabbdc   coral
-
-        #e0ffff light cyan
+                    });
 
 
-        #e0ffff
-        #e0f0ff
-        #e0e0ff
-        #f0e0ff
-        #ffe0ff
-        #ffe0f0  similar to other theme but more opaque
-        */
+
+
+
+
+
+
+
+                    });
+
+
+
+
+
+
+
+
+
+                    /*font ideas:
+                                font-family: 'Quattrocento Sans', sans-serif;
+                            
+                                font-family: 'Forum', cursive;
+                             
+                                font-family: 'Quicksand', sans-serif;
+                                
+                                NIGHT MODE:
+                                font-family: 'Raleway Dots', cursive
+
+                    //color ideas:
+                    #bbfaf8   aqua
+                    #bbdcfa   blue
+                    #bbbdfa   purple
+                    #d9bbfa   lavendar
+                    #f8bbfa   pink
+                    #fabbdc   coral
+
+                    #e0ffff light cyan
+
+
+                    #e0ffff
+                    #e0f0ff
+                    #e0e0ff
+                    #f0e0ff
+                    #ffe0ff
+                    #ffe0f0  similar to other theme but more opaque
+                    */
     </script>
 </body>
 
