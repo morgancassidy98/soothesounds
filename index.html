@@ -23,10 +23,14 @@
 
         }
 
+
         .top-nav li {
             display: inline;
             cursor: pointer;
-            margin-right: 1em;
+
+            padding: .5em;
+            font-size: 1em;
+            border-radius: 10px;
 
 
 
@@ -34,7 +38,7 @@
 
         .side-nav {
             position: absolute;
-            top: 14%;
+            top: 17%;
             left: 0%;
             width: 15%;
             height: 80%;
@@ -50,6 +54,7 @@
             position: absolute;
             left: 0;
             padding: 1em;
+            padding-top:1.5em;
             cursor: pointer;
             width: 100%;
 
@@ -61,7 +66,7 @@
         }
 
         .option {
-            padding-bottom: .7em;
+            padding-bottom: 1.5em;
         }
 
 
@@ -147,7 +152,20 @@
         .title div {
             display: inline;
         }
-
+        #intro-image{
+            position:absolute;
+            top:68vh;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:100vw;
+            height:80vh;
+            z-index:-1;
+            
+            background-image: url(music-icon-png.png);
+          
+           
+            background-size:cover;
+        }
 
 
 
@@ -263,6 +281,7 @@
             border-radius: 10px;
             align-items: center;
             padding: 1em;
+            justify-items: center;
 
             grid-template-columns: 1fr 1fr 1fr;
             grid-row-gap: 1em;
@@ -276,9 +295,10 @@
         }
 
         .box {
-            width: 90%;
+            width: 60%;
             height: auto;
             align-items: center;
+            justify-items: center;
         }
 
         .row {
@@ -286,25 +306,25 @@
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
 
-            background-color: aquamarine;
+            /*background-color: aquamarine;*/
             cursor: pointer;
             user-select: none;
         }
 
         #section1 {
-            background-color: #ffe0ff;
+            background-color: #e0f0ff;
         }
 
         #section2 {
-            background-color: #e0f0ff;
+            background-color: #d0f0c0;
         }
 
         #section3 {
-            background-color: #ffe0ff;
+            background-color: #e0f0ff;
         }
 
         #section4 {
-            background-color: #e0f0ff;
+            background-color: #d0f0c0;
         }
 
         .music-btn {
@@ -408,6 +428,7 @@
         <div id="create" class="button"><i class="material-icons">
                 create
             </i>Create</div>
+        <div id="intro-image"></div>
     </div>
 
     <div id="listen-page">
@@ -423,12 +444,18 @@
             </nav>
         </header>
         <div id="playlist">
-            <div class="box" id="box1"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box2"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box3"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box1">Playlist 1<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/311547228&color=%23d0f0c0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box2">Playlist 2<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box3">Playlist 3<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box4"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box5"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box6"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box7"><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/311547228&color=%23d0f0c0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box8"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box9"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box10"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box11"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box12"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
         </div>
 
     </div>
@@ -552,6 +579,15 @@
 
 
         </div>
+    </div>
+
+
+
+    <div id="all-sounds">
+        <audio class="piano"></audio>
+
+
+
     </div>
 
 
@@ -731,7 +767,7 @@
                 $(".inner-list-button").css("background-color", "navy");
                 $("#day-night").addClass("nightmode");
                 $(".option").mouseover(function() {
-                    $(this).css("background-color", "navy");
+                    $(this).css("background-color", "#f8bbfa ");
                 })
 
 
@@ -760,6 +796,67 @@
             });
 
 
+
+
+
+            //FUNCTIONALITY OF INSTRUMENTS
+            //STEP 1 find all of the audio samples
+            /*var kick = document.getElementById('kick'),  
+    hihat = document.getElementById('hihat'),
+    snare = document.getElementById('snare'),
+    clap = document.getElementById('clap'),
+    controls = document.querySelectorAll('.inst-controls');
+*/
+            //step 2 play the samples when things happen (change key to click)
+            /*function playInst (event) {  
+    var code = event.keyCode;
+    if (code === 83) { // 83 = s
+        snare.currentTime = 0;
+        snare.play();
+        return;
+    } else if (code === 67) { // 67 = c
+        clap.currentTime = 0;
+        clap.play();
+        return;
+    } else if (code === 72) { // 72 = h
+        hihat.currentTime = 0;
+        hihat.play();
+        return;
+    } else if (code === 75) { // 75 = k
+        kick.currentTime = 0;
+        kick.play();
+        return;
+    } else {
+        return;
+    }
+} */
+            //step 3 listen for event
+            //window.addEventListener('keydown', playInst);
+            //step 4 (in seperate FILE) helps to find source?
+            /*var trackContainer = document.getElementById('tracks'),  
+    trackTemplate = document.getElementById('track-template'),
+    track = [],
+    feedbackElement = document.getElementById('feedback');
+recordButton = document.getElementById('record'),  
+    stopButton = document.getElementById('stop');
+audioContext = new AudioContext(),  
+    audioContextStreamDest = audioContext.createMediaStreamDestination(),
+    kickStream = kick.mozCaptureStream(),
+    snareStream = snare.mozCaptureStream(),
+    hihatStream = hihat.mozCaptureStream(),
+    clapStream = clap.mozCaptureStream(),
+    kickSource = audioContext.createMediaStreamSource(kickStream),
+    snareSource = audioContext.createMediaStreamSource(snareStream),
+    hihatSource = audioContext.createMediaStreamSource(hihatStream),
+    clapSource = audioContext.createMediaStreamSource(clapStream);
+    */
+            //record function
+            /*function record() {  
+                Recorder.start();
+                recordButton.children[0].classList.add('recording');
+                recordButton.removeEventListener('click', record);
+                stopButton.addEventListener('click', stop);
+            }*/
 
 
 
