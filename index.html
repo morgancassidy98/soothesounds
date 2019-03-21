@@ -38,9 +38,9 @@
 
         .side-nav {
             position: absolute;
-            top: 17%;
+            top: 8%;
             left: 0%;
-            width: 15%;
+            width: 6%;
             height: 80%;
             margin-right: 1em;
             list-style: none;
@@ -54,15 +54,17 @@
             position: absolute;
             left: 0;
             padding: 1em;
-            padding-top:1.5em;
+            padding-top: 1.5em;
             cursor: pointer;
             width: 100%;
+           
 
 
         }
 
         .inner-list div {
             display: none;
+            font-size:.7em;
         }
 
         .option {
@@ -75,19 +77,22 @@
         #melody {
             top: 0%;
 
+           
+
+
         }
 
         #water {
-            top: 20%;
+            top: 28%;
 
         }
 
         #drum {
-            top: 40%;
+            top: 56%;
         }
 
         #synth {
-            top: 60%;
+            top: 84%;
 
         }
 
@@ -95,7 +100,6 @@
             position: absolute;
             display: grid;
             z-index: 1;
-
             left: 50%;
             top: 48%;
             transform: translate(-50%, -50%);
@@ -136,7 +140,7 @@
         .title {
             position: absolute;
             text-align: center;
-            top: 20%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
@@ -152,20 +156,8 @@
         .title div {
             display: inline;
         }
-        #intro-image{
-            position:absolute;
-            top:68vh;
-            left:50%;
-            transform: translate(-50%,-50%);
-            width:100vw;
-            height:80vh;
-            z-index:-1;
-            
-            background-image: url(music-icon-png.png);
-          
-           
-            background-size:cover;
-        }
+
+
 
 
 
@@ -186,7 +178,8 @@
         .button {
             border-radius: 5px;
             cursor: pointer;
-            padding: 1em;
+            padding:1em;
+          
         }
 
         .button:hover {
@@ -206,11 +199,6 @@
             color: white;
             user-select: none;
 
-
-
-
-
-
         }
 
         #pause-btn {
@@ -222,9 +210,6 @@
         #stop-btn {
 
             display: none;
-
-
-
         }
 
 
@@ -237,10 +222,6 @@
 
 
         #download {}
-
-
-
-
 
         .control-button:hover {
 
@@ -355,7 +336,20 @@
             display: none;
         }
 
+        .intro-icon i {
+            color: black;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 200%;
+            left: 50%;
+            animation: glide 2s;
+        }
 
+        @keyframes glide() {
+            from {transform: translateY(-100px;)}
+            to({transform: translateY(0);})
+           
+        }
 
 
         @media only screen and (max-width: 1000px) {
@@ -402,8 +396,6 @@
             .nightmode i {
                 color: white;
             }
-
-
         }
     </style>
 </head>
@@ -428,7 +420,10 @@
         <div id="create" class="button"><i class="material-icons">
                 create
             </i>Create</div>
-        <div id="intro-image"></div>
+        <div class="intro-icon"><i class="material-icons">
+                music_note
+            </i></div>
+
     </div>
 
     <div id="listen-page">
@@ -440,6 +435,7 @@
                 <ul>
                     <li id="listen-nav"><a href=#>Listen</a></li>
                     <li id="create-nav"><a href=#>Create</a></li>
+                    
                 </ul>
             </nav>
         </header>
@@ -471,35 +467,38 @@
                 <ul>
                     <li id="listen-nav-2"><a href=#>Listen</a></li>
                     <li id="create-nav-2"><a href=#>Create</a></li>
+                    
                 </ul>
+                
             </nav>
         </header>
 
         <nav class="side-nav">
 
             <div class="opt" id="option1">
-                <div class="inner-list button" id="melody">Option 1<br><br>
-                    <div class="option button">piano</div>
-                    <div class="option button">keyboard</div>
+                <div class="inner-list button" id="melody">Melody<br><br>
+                    <div class="option button" id="piano">piano</div>
+                    <div class="option button" id="keyboard">keyboard</div>
                 </div>
             </div>
             <div class="opt" id="option2">
-                <div class="inner-list button" id="water">Option 2<br><br>
-                    <div class="option button">ocean</div>
-                    <div class="option button">rain</div>
+                <div class="inner-list button" id="water">Nature<br><br>
+                    <div class="option button" id="ocean">ocean</div>
+                    <div class="option button" id="rain">rain</div>
                 </div>
             </div>
             <div class="opt" id="option3">
-                <div class="inner-list button" id="drum">Option 3<br><br>
-                    <div class="option button">bongo</div>
-                    <div class="option button">snare</div>
+                <div class="inner-list button" id="drum">Drum<br><br>
+                    <div class="option button" id="bongo">bongo</div>
+                    <div class="option button" id="snare">snare</div>
                 </div>
             </div>
             <div class="opt" id="option4">
-                <div class="inner-list button" id="synth">Option 4<br><br>
-                    <div class="option button">bright synth</div>
-                    <div class="option button">deep synth</div>
+                <div class="inner-list button" id="synth">Synth<br><br>
+                    <div class="option button" id="bright">bright synth</div>
+                    <div class="option button" id="deep">deep synth</div>
                 </div>
+
             </div>
 
         </nav>
@@ -584,7 +583,11 @@
 
 
     <div id="all-sounds">
-        <audio class="piano"></audio>
+        <div class="piano-samples">
+            <audio class="piano" div="piano1">
+                <source src="musicSamples/piano_c_1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
 
 
 
@@ -595,12 +598,6 @@
 
     <footer>Copyright &copy; Cassidy Morgan 2019</footer>
 
-
-
-
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -608,91 +605,23 @@
             $(".title").fadeIn(3000);
 
 
-            $("#melody").click(function() {
-                $("#melody div").show();
-                $("#water div").hide();
-                $("#drum div").hide();
-                $("#synth div").hide();
+
+            $(".inner-list").click(function() {
+                $(".inner-list div").hide();
+                $(this).find('div').show();
 
             });
-            $("#melody").mouseover(function() {
-                $("#melody div").toggle();
-                $("#water div").hide();
-                $("#drum div").hide();
-                $("#synth div").hide();
+            $(".inner-list").mouseover(function() {
+                $(".inner-list div").hide();
+                $(this).find('div').show();
 
             });
-            $("#melody").mouseout(function() {
-                $("#melody div").hide();
-                $("#water div").hide();
-                $("#drum div").hide();
-                $("#synth div").hide();
-
-            });
-            $("#water").click(function() {
-                $("#melody div").hide();
-                $("#drum div").hide();
-                $("#water div").show();
-                $("#synth div").hide();
+            $(".inner-list").mouseout(function() {
+                $(".inner-list div").hide();
+                $(this).find('div').hide();
 
             });
 
-            $("#water").mouseover(function() {
-                $("#melody div").hide()
-                $("#drum div").hide();
-                $("#synth div").hide();
-
-                $("#water div").toggle();
-
-            });
-            $("#water").mouseout(function() {
-                $("#melody div").hide();
-                $("#drum div").hide();
-                $("#synth div").hide();
-
-                $("#water div").hide();
-
-            });
-            $("#drum").click(function() {
-                $("#drum div").show();
-                $("#water div").hide();
-                $("#melody div").hide();
-                $("#synth div").hide();
-
-
-            });
-            $("#drum").mouseover(function() {
-                $("#drum div").toggle();
-                $("#water div").hide();
-                $("#melody div").hide();
-                $("#synth div").hide();
-
-
-            });
-            $("#drum").mouseout(function() {
-                $("#drum div").hide();
-                $("#water div").hide();
-                $("#melody div").hide()
-                $("#synth div").hide();
-
-
-            });
-            $("#synth").mouseover(function() {
-                $("#synth div").toggle();
-                $("#water div").hide();
-                $("#melody div").hide()
-                $("#drum div").hide();
-
-
-            });
-            $("#synth").mouseout(function() {
-                $("#synth div").hide();
-                $("#water div").hide();
-                $("#melody div").hide()
-                $("#drum div").hide();
-
-
-            });
             $("#listen").click(function() {
                 $(".title").hide();
                 $("#listen-page").show();
@@ -757,14 +686,11 @@
                 $("#night i").show();
                 $("body").css({
                     "color": "white",
-                    "background-color": "navy"
+                    "background-color": "rgba(0,0,0, 0.6)"
                 });
                 $("html").css("filter", "brightness(75%)");
-                $("a").css({
-                    "background-color": "navy",
-                    "color": "white"
-                });
-                $(".inner-list-button").css("background-color", "navy");
+              
+                $(".inner-list-button").css("background-color", "rgba(0,0,0, 0.6)	");
                 $("#day-night").addClass("nightmode");
                 $(".option").mouseover(function() {
                     $(this).css("background-color", "#f8bbfa ");
@@ -788,12 +714,202 @@
                 $("#day-night").removeClass("nightmode");
                 $(".option").mouseover(function() {
                     $(this).css("background-color", "#ffe0ff");
-                })
+                });
+            });
+            //if option is clicked, then variable names for instruments will change
+            var row1btn1 = document.createElement('audio');
+            var row1btn2 = document.createElement('audio');
+            var row1btn3 = document.createElement('audio');
+            var row1btn4 = document.createElement('audio');
+            var row1btn5 = document.createElement('audio');
+            var row1btn6 = document.createElement('audio');
+            var row1btn7 = document.createElement('audio');
+            var row1btn8 = document.createElement('audio');
+
+            var row2btn1 = document.createElement('audio');
+            var row2btn2 = document.createElement('audio');
+            var row2btn3 = document.createElement('audio');
+            var row2btn4 = document.createElement('audio');
+            var row2btn5 = document.createElement('audio');
+            var row2btn6 = document.createElement('audio');
+            var row2btn7 = document.createElement('audio');
+            var row2btn8 = document.createElement('audio');
+
+            var row3btn1 = document.createElement('audio');
+            var row3btn2 = document.createElement('audio');
+            var row3btn3 = document.createElement('audio');
+            var row3btn4 = document.createElement('audio');
+            var row3btn5 = document.createElement('audio');
+            var row3btn6 = document.createElement('audio');
+            var row3btn7 = document.createElement('audio');
+            var row3btn8 = document.createElement('audio');
+
+            var row4btn1 = document.createElement('audio');
+            var row4btn2 = document.createElement('audio');
+            var row4btn3 = document.createElement('audio');
+            var row4btn4 = document.createElement('audio');
+            var row4btn5 = document.createElement('audio');
+            var row4btn6 = document.createElement('audio');
+            var row4btn7 = document.createElement('audio');
+            var row4btn8 = document.createElement('audio');
 
 
+
+
+
+
+
+
+
+            $("#piano").on('click', function() {
+
+                row1btn1.setAttribute('src', 'musicSamples/piano_c_1.mp3');
+                row1btn2.setAttribute('src', 'musicSamples/piano_d_1.mp3');
+                row1btn3.setAttribute('src', 'musicSamples/piano_e_1.mp3');
 
 
             });
+            $("#keyboard").on('click', function() {
+
+                row1btn1.setAttribute('src', 'musicSamples/keyboard_c_1.mp3');
+            });
+            
+            $("#section1-btn1").click(function() {
+                row1btn1.play();
+
+            });
+            $("#section1-btn2").click(function() {
+                row1btn2.play();
+
+            });
+            $("#section1-btn3").click(function() {
+                row1btn3.play();
+
+            });
+            $("#section1-btn4").click(function() {
+                row1btn4.play();
+
+            });
+            $("#section1-btn5").click(function() {
+                row1btn5.play();
+
+            });
+            $("#section1-btn6").click(function() {
+                row1btn6.play();
+
+            });
+            $("#section1-btn7").click(function() {
+                row1btn7.play();
+
+            });
+            $("#section1-btn8").click(function() {
+                row1btn8.play();
+
+            });
+            
+             $("#section2-btn1").click(function() {
+                row2btn1.play();
+
+            });
+            $("#section2-btn2").click(function() {
+                row2btn2.play();
+
+            });
+            $("#section2-btn3").click(function() {
+                row2btn3.play();
+
+            });
+            $("#section2-btn4").click(function() {
+                row2btn4.play();
+
+            });
+            $("#section2-btn5").click(function() {
+                row2btn5.play();
+
+            });
+            $("#section2-btn6").click(function() {
+                row2btn6.play();
+
+            });
+            $("#section2-btn7").click(function() {
+                row2btn7.play();
+
+            });
+            $("#section2-btn8").click(function() {
+                row2btn8.play();
+
+            });
+            
+            $("#section3-btn1").click(function() {
+                row3btn1.play();
+
+            });
+            $("#section3-btn2").click(function() {
+                row3btn2.play();
+
+            });
+            $("#section3-btn3").click(function() {
+                row3btn3.play();
+
+            });
+            $("#section3-btn4").click(function() {
+                row3btn4.play();
+
+            });
+            $("#section3-btn5").click(function() {
+                row3btn5.play();
+
+            });
+            $("#section3-btn6").click(function() {
+                row3btn6.play();
+
+            });
+            $("#section3-btn7").click(function() {
+                row3btn7.play();
+
+            });
+            $("#section3-btn8").click(function() {
+                row3btn8.play();
+
+            });
+            
+            $("#section4-btn1").click(function() {
+                row4btn1.play();
+
+            });
+            $("#section4-btn2").click(function() {
+                row4btn2.play();
+
+            });
+            $("#section4-btn3").click(function() {
+                row4btn3.play();
+
+            });
+            $("#section4-btn4").click(function() {
+                row4btn4.play();
+
+            });
+            $("#section4-btn5").click(function() {
+                row4btn5.play();
+
+            });
+            $("#section4-btn6").click(function() {
+                row4btn6.play();
+
+            });
+            $("#section4-btn7").click(function() {
+                row4btn7.play();
+
+            });
+            $("#section4-btn8").click(function() {
+                row4btn8.play();
+
+            });
+
+
+
+
+
 
 
 
@@ -864,6 +980,7 @@ audioContext = new AudioContext(),
 
 
 
+
         });
 
 
@@ -902,6 +1019,7 @@ audioContext = new AudioContext(),
         #ffe0ff
         #ffe0f0  similar to other theme but more opaque
         */
+
     </script>
 </body>
 
