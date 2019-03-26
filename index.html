@@ -140,7 +140,7 @@
         .title {
             position: absolute;
             text-align: center;
-            top: 40%;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
@@ -270,8 +270,8 @@
         }
 
         iframe {
-            width: 100%;
-            height: auto;
+            width: auto;
+            height: 50%;
 
         }
 
@@ -345,11 +345,7 @@
             animation: glide 2s;
         }
 
-        @keyframes glide() {
-            from {transform: translateY(-100px;)}
-            to({transform: translateY(0);})
-           
-        }
+     
 
 
         @media only screen and (max-width: 1000px) {
@@ -428,7 +424,7 @@
 
     <div id="listen-page">
         <header>
-            <h1>Soothe Sounds</h1>
+            <h1><a href="index.html">Soothe Sounds</a></h1>
 
 
             <nav class="top-nav">
@@ -449,9 +445,7 @@
             <div class="box" id="box7"><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/311547228&color=%23d0f0c0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box8"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box9"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box10"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box11"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box12"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+           
         </div>
 
     </div>
@@ -460,7 +454,7 @@
 
     <div id="create-page">
         <header>
-            <h1>Soothe Sounds</h1>
+            <h1><a href="index.html">Soothe Sounds</a></h1>
 
 
             <nav class="top-nav">
@@ -600,9 +594,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+              $(".title").hide();
+            $(".title").fadeIn(6000);
         $(document).ready(function() {
-            $(".title").hide();
-            $(".title").fadeIn(3000);
+       
 
 
 
@@ -774,6 +769,7 @@
                 row1btn1.setAttribute('src', 'musicSamples/keyboard_c_1.mp3');
             });
             
+            
             $("#section1-btn1").click(function() {
                 row1btn1.play();
 
@@ -850,6 +846,9 @@
             });
             $("#section3-btn3").click(function() {
                 row3btn3.play();
+                
+                
+                
 
             });
             $("#section3-btn4").click(function() {
