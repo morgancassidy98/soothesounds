@@ -20,7 +20,7 @@
             top: 5%;
             transform: translate(-50%, -50%);
             padding: 3em;
-            display:none;
+            display: none;
 
         }
 
@@ -44,7 +44,7 @@
             height: 80%;
             margin-right: 1em;
             list-style: none;
-            font-weight:bold;
+            font-weight: bold;
 
         }
 
@@ -55,24 +55,24 @@
             padding-top: .5em;
             cursor: pointer;
             width: 100%;
-           
+
 
 
         }
 
         .inner-list div {
             display: none;
-            font-size:1em;
+            font-size: 1em;
         }
 
         .option {
             padding-bottom: .5em;
         }
-       
+
         #melody {
             top: 0%;
 
-           }
+        }
 
         #water {
             top: 25%;
@@ -87,26 +87,27 @@
             top: 75%;
 
         }
-        #wrapper{
-            position:absolute;
-            top:10%;
-            left:0;
-            width:100%;
-            height:100%;
-            text-align:center;
+
+        #wrapper {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
             align-content: center;
-            z-index:-1;
+            z-index: -1;
         }
 
         main {
-           
+
             display: grid;
             z-index: 1;
-          
+
             /*transform: translate(-50%, -50%);*/
             width: 84%;
             height: 74%;
-            margin:auto;
+            margin: auto;
             background-color: #e0ffff;
             margin-top: 1em;
             border-radius: 10px;
@@ -168,8 +169,8 @@
             /*display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 1em;*/
-            display:none;
-         
+            display: none;
+
 
 
         }
@@ -177,8 +178,9 @@
         .button {
             border-radius: 5px;
             cursor: pointer;
-            padding:.5em;
-          
+            padding: .5em;
+            
+
         }
 
         .button:hover {
@@ -220,9 +222,7 @@
 
 
 
-        #download {
-            
-        }
+        #download {}
 
         .control-button:hover {
             opacity: .8;
@@ -241,7 +241,7 @@
 
         a:active {
             color: #e0ffff;
-            background-color:#e0ffff;
+            background-color: #e0ffff;
             opacity: .8;
         }
 
@@ -261,15 +261,12 @@
             padding: 1em;
             justify-items: center;
             grid-template-columns: repeat(4, 25vw);
-           
+
             grid-row-gap: 1em;
             grid-column-gap: 1em;
         }
 
-       .playlist iframe {
-  
-
-        }
+        .playlist iframe {}
 
         .box {
             width: 60%;
@@ -288,21 +285,23 @@
             user-select: none;
         }
 
-        #section1, #section3 {
+        #section1,
+        #section3 {
             background-color: #e0f0ff;
         }
 
-        #section2, #section4 {
+        #section2,
+        #section4 {
             background-color: #d0f0c0;
         }
 
-      
-       .music-btn {
+
+        .music-btn {
             border: 2px solid white;
-            user-select:none;
-           
-          }
-      
+            user-select: none;
+
+        }
+
 
         .music-btn:hover {
             border: 2px solid white;
@@ -337,7 +336,7 @@
             animation: glide 2s;
         }
 
-     
+
 
 
         @media only screen and (max-width: 1000px) {
@@ -420,12 +419,11 @@
         <div id="create" class="button"><i class="material-icons">
                 create
             </i>Create</div>
-        <div class="intro-icon"><i class="material-icons">
-                music_note
-            </i></div>
+     
 
     </div>
-
+    
+<!--
     <div id="listen-page">
 
         <div id="playlist">
@@ -442,6 +440,7 @@
         </div>
 
     </div>
+-->
 
 
 
@@ -478,59 +477,59 @@
 
         </nav>
         <div id="wrapper">
-        <main>
-            <div class="row" id="section1">
-                <div class="music-btn" id="section1-btn1"></div>
-                <div class="music-btn" id="section1-btn2"></div>
-                <div class="music-btn" id="section1-btn3"></div>
-                <div class="music-btn" id="section1-btn4"></div>
-                <div class="music-btn" id="section1-btn5"></div>
-                <div class="music-btn" id="section1-btn6"></div>
-                <div class="music-btn" id="section1-btn7"></div>
-                <div class="music-btn" id="section1-btn8"></div>
-            </div>
-            <div class="row" id="section2">
-                <div class="music-btn" id="section2-btn1"></div>
-                <div class="music-btn" id="section2-btn2"></div>
-                <div class="music-btn" id="section2-btn3"></div>
-                <div class="music-btn" id="section2-btn4"></div>
-                <div class="music-btn" id="section2-btn5"></div>
-                <div class="music-btn" id="section2-btn6"></div>
-                <div class="music-btn" id="section2-btn7"></div>
-                <div class="music-btn" id="section2-btn8"></div>
-            </div>
-            <div class="row" id="section3">
-                <div class="music-btn" id="section3-btn1"></div>
-                <div class="music-btn" id="section3-btn2"></div>
-                <div class="music-btn" id="section3-btn3"></div>
-                <div class="music-btn" id="section3-btn4"></div>
-                <div class="music-btn" id="section3-btn5"></div>
-                <div class="music-btn" id="section3-btn6"></div>
-                <div class="music-btn" id="section3-btn7"></div>
-                <div class="music-btn" id="section3-btn8"></div>
-            </div>
+            <main>
+                <div class="row" id="section1">
+                    <div class="music-btn" id="section1-btn1"></div>
+                    <div class="music-btn" id="section1-btn2"></div>
+                    <div class="music-btn" id="section1-btn3"></div>
+                    <div class="music-btn" id="section1-btn4"></div>
+                    <div class="music-btn" id="section1-btn5"></div>
+                    <div class="music-btn" id="section1-btn6"></div>
+                    <div class="music-btn" id="section1-btn7"></div>
+                    <div class="music-btn" id="section1-btn8"></div>
+                </div>
+                <div class="row" id="section2">
+                    <div class="music-btn" id="section2-btn1"></div>
+                    <div class="music-btn" id="section2-btn2"></div>
+                    <div class="music-btn" id="section2-btn3"></div>
+                    <div class="music-btn" id="section2-btn4"></div>
+                    <div class="music-btn" id="section2-btn5"></div>
+                    <div class="music-btn" id="section2-btn6"></div>
+                    <div class="music-btn" id="section2-btn7"></div>
+                    <div class="music-btn" id="section2-btn8"></div>
+                </div>
+                <div class="row" id="section3">
+                    <div class="music-btn" id="section3-btn1"></div>
+                    <div class="music-btn" id="section3-btn2"></div>
+                    <div class="music-btn" id="section3-btn3"></div>
+                    <div class="music-btn" id="section3-btn4"></div>
+                    <div class="music-btn" id="section3-btn5"></div>
+                    <div class="music-btn" id="section3-btn6"></div>
+                    <div class="music-btn" id="section3-btn7"></div>
+                    <div class="music-btn" id="section3-btn8"></div>
+                </div>
 
-            <div class="row" id="section4">
-                <div class="music-btn" id="section4-btn1"></div>
-                <div class="music-btn" id="section4-btn2"></div>
-                <div class="music-btn" id="section4-btn3"></div>
-                <div class="music-btn" id="section4-btn4"></div>
-                <div class="music-btn" id="section4-btn5"></div>
-                <div class="music-btn" id="section4-btn6"></div>
-                <div class="music-btn" id="section4-btn7"></div>
-                <div class="music-btn" id="section4-btn8"></div>
-            </div>
-
-
+                <div class="row" id="section4">
+                    <div class="music-btn" id="section4-btn1"></div>
+                    <div class="music-btn" id="section4-btn2"></div>
+                    <div class="music-btn" id="section4-btn3"></div>
+                    <div class="music-btn" id="section4-btn4"></div>
+                    <div class="music-btn" id="section4-btn5"></div>
+                    <div class="music-btn" id="section4-btn6"></div>
+                    <div class="music-btn" id="section4-btn7"></div>
+                    <div class="music-btn" id="section4-btn8"></div>
+                </div>
 
 
 
 
-        </main>
+
+
+            </main>
         </div>
         <div class="controls">
 
-            <div id="record-stop" class="control-button"><i class="material-icons" id="record-btn">
+            <div id="record-stop" class="control-button"><i class="material-icons active" id="record-btn">
                     fiber_manual_record
                 </i>
 
@@ -540,7 +539,7 @@
 
             </div>
 
-            <div id="play-pause" class="control-button"><i class="material-icons" id="play-btn">
+            <div id="play-pause" class="control-button"><i class="material-icons active" id="play-btn">
                     play_circle_outline
                 </i>
 
@@ -571,307 +570,376 @@
         $(".title").hide();
         $(".title").fadeIn(6000);
         $(document).ready(function() {
+            $(".music-btn").click(function(){
+                console.log("I was clicked!!!!");
+            });
 
 
 
 
-                    $(".inner-list").click(function() {
-                        $(".inner-list div").hide();
-                        $(this).find('div').show();
+            $(".inner-list").click(function() {
+                $(".inner-list div").hide();
+                $(this).find('div').show();
 
+            });
+            $(".inner-list").mouseover(function() {
+                $(".inner-list div").hide();
+                $(this).find('div').show();
+
+            });
+            $(".inner-list").mouseout(function() {
+                $(".inner-list div").hide();
+                $(this).find('div').hide();
+
+            });
+
+            $("#listen").click(function() {
+                $(".title").hide();
+                $("#listen-page").show();
+                $("header").show();
+                $("#listen-nav").css("background-color", "#e0ffff");
+                $("#listen-nav-2").css("background-color", "#e0ffff");
+
+            });
+            $("#create").click(function() {
+                $(".title").hide();
+                $("#create-page").show();
+                $("header").show();
+                $("#create-nav").css("background-color", "#e0ffff");
+                $("#create-nav-2").css("background-color", "#e0ffff");
+
+
+            });
+            $("#listen-nav").click(function() {
+                $("#listen-page").toggle();
+                $("#create-page").toggle();
+            });
+            $("#create-nav").click(function() {
+                $("#listen-page").toggle();
+                $("#create-page").toggle();
+            });
+
+
+            $(".top-nav li").click(function() {
+                $(".top-nav li").css("background-color", "white");
+                $(this).css("background-color", "#e0ffff");
+
+            });
+            var clickedElements = new Array();
+            $("#record-stop").click(function() {
+                 
+                
+                $("#record-btn").toggle().toggleClass("active");
+                $("#stop-btn").toggle().toggleClass("active");
+                if ($("#stop-btn").hasClass("active")){
+                console.log("active");
+                $("body").click(function(e) {
+
+                var clicked = $(e.target);
+                clickedElements.push(clicked);
+                console.log(clickedElements);
+                  
+                
+              });
+          
+                
+                
+            }
+                else{
+                    $("body").click(function(e){
+                       clickedElements.pop($("#stop-btn"));
                     });
-                    $(".inner-list").mouseover(function() {
-                        $(".inner-list div").hide();
-                        $(this).find('div').show();
-
-                    });
-                    $(".inner-list").mouseout(function() {
-                        $(".inner-list div").hide();
-                        $(this).find('div').hide();
-
-                    });
-
-                    $("#listen").click(function() {
-                        $(".title").hide();
-                        $("#listen-page").show();
-                        $("header").show();
-                        $("#listen-nav").css("background-color", "#e0ffff");
-                        $("#listen-nav-2").css("background-color", "#e0ffff");
-
-                    });
-                    $("#create").click(function() {
-                        $(".title").hide();
-                        $("#create-page").show();
-                        $("header").show();
-                        $("#create-nav").css("background-color", "#e0ffff");
-                        $("#create-nav-2").css("background-color", "#e0ffff");
-
-
-                    });
-                    $("#listen-nav").click(function() {
-                        $("#listen-page").toggle();
-                        $("#create-page").toggle();
-                    });
-                    $("#create-nav").click(function() {
-                        $("#listen-page").toggle();
-                        $("#create-page").toggle();
-                    });
-
-
-                    $(".top-nav li").click(function() {
-                        $(".top-nav li").css("background-color", "white");
-                        $(this).css("background-color", "#e0ffff");
+                    
+                }
+                return clickedElements;
+              
+         });
+
+            $("#play-pause").click(function() {
+                $("#play-btn").toggle().toggleClass("active");
+                $("#pause-btn").toggle().toggleClass("active");
+                var arrayLength = clickedElements.length;
+                if ($("#pause-btn").hasClass("active")){
+                for (var i = 1; i < arrayLength-1; i++) {
+                    console.log(clickedElements[i]);
+                    clickedElements[i].click();
+                    setTimeout(function(){ 
+                    clickedElements[i].click()}, 1000);
+                    console.log(clickedElements[i]);
+                    clickedElements[i].click();
+                    setTimeout(function(){ 
+                    clickedElements[i].click()}, 1000);
+                     console.log(clickedElements[i]);
+                    clickedElements[i].click();
+                    setTimeout(function(){ 
+                    clickedElements[i].click()}, 1000);
+                     console.log(clickedElements[i]);
+                    clickedElements[i].click();
+                    setTimeout(function(){ 
+                    clickedElements[i].click()}, 1000);
+                     console.log(clickedElements[i]);
+                    clickedElements[i].click();
+                    setTimeout(function(){ 
+                    clickedElements[i].click()}, 1000);
+                    
+                    
+                    
+                   
+                    }
+                }
+                else{
+                    clickedElements = new Array();
+                }
+       
+
+            });
+    
+            $("#day").click(function() {
+                $("#day i").hide();
+                $("#night i").show();
+                $("body").css({
+                    "color": "white",
+                    "background-color": "rgba(0,0,0, 0.6)"
+                });
+                $("html").css("filter", "brightness(75%)");
+
+                $(".inner-list-button").css("background-color", "rgba(0,0,0, 0.6)	");
+                $("#day-night").addClass("nightmode");
+                $(".option").mouseover(function() {
+                    $(this).css("background-color", "#f8bbfa");
+                })
+
+
+            });
+            $("#night").click(function() {
+                $("#night i").hide();
+                $("#day i").show();
+                $("body").css({
+                    "color": "black",
+                    "background-color": "white"
+                });
+                $("html").css("filter", "brightness(100%)");
+
+                $(".inner-list-button").css("background-color", "#e0e0ff");
+                $("#day-night").removeClass("nightmode");
+                $(".option").mouseover(function() {
+                    $(this).css("background-color", "#ffe0ff");
+                });
+            });
+
+
+
+
+
+
+
+
+
+            //if option is clicked, then variable names for instruments will change
+            var row1btn1 = document.createElement('audio');
+            var row1btn2 = document.createElement('audio');
+            var row1btn3 = document.createElement('audio');
+            var row1btn4 = document.createElement('audio');
+            var row1btn5 = document.createElement('audio');
+            var row1btn6 = document.createElement('audio');
+            var row1btn7 = document.createElement('audio');
+            var row1btn8 = document.createElement('audio');
+
+            var row2btn1 = document.createElement('audio');
+            var row2btn2 = document.createElement('audio');
+            var row2btn3 = document.createElement('audio');
+            var row2btn4 = document.createElement('audio');
+            var row2btn5 = document.createElement('audio');
+            var row2btn6 = document.createElement('audio');
+            var row2btn7 = document.createElement('audio');
+            var row2btn8 = document.createElement('audio');
 
-                    });
+            var row3btn1 = document.createElement('audio');
+            var row3btn2 = document.createElement('audio');
+            var row3btn3 = document.createElement('audio');
+            var row3btn4 = document.createElement('audio');
+            var row3btn5 = document.createElement('audio');
+            var row3btn6 = document.createElement('audio');
+            var row3btn7 = document.createElement('audio');
+            var row3btn8 = document.createElement('audio');
 
-                    $("#play-pause").click(function() {
-                        $("#play-btn").toggle();
-                        $("#pause-btn").toggle();
+            var row4btn1 = document.createElement('audio');
+            var row4btn2 = document.createElement('audio');
+            var row4btn3 = document.createElement('audio');
+            var row4btn4 = document.createElement('audio');
+            var row4btn5 = document.createElement('audio');
+            var row4btn6 = document.createElement('audio');
+            var row4btn7 = document.createElement('audio');
+            var row4btn8 = document.createElement('audio');
 
-                    });
-                    $("#record-stop").click(function() {
-                        $("#record-btn").toggle();
-                        $("#stop-btn").toggle();
 
-                    });
-                    $("#day").click(function() {
-                        $("#day i").hide();
-                        $("#night i").show();
-                        $("body").css({
-                            "color": "white",
-                            "background-color": "rgba(0,0,0, 0.6)"
-                        });
-                        $("html").css("filter", "brightness(75%)");
 
-                        $(".inner-list-button").css("background-color", "rgba(0,0,0, 0.6)	");
-                        $("#day-night").addClass("nightmode");
-                        $(".option").mouseover(function() {
-                            $(this).css("background-color", "#f8bbfa");
-                        })
 
 
-                    });
-                    $("#night").click(function() {
-                        $("#night i").hide();
-                        $("#day i").show();
-                        $("body").css({
-                            "color": "black",
-                            "background-color": "white"
-                        });
-                        $("html").css("filter", "brightness(100%)");
 
-                        $(".inner-list-button").css("background-color", "#e0e0ff");
-                        $("#day-night").removeClass("nightmode");
-                        $(".option").mouseover(function() {
-                            $(this).css("background-color", "#ffe0ff");
-                        });
-                    });
 
 
 
+            $("#piano").on('click', function() {
 
+                row1btn1.setAttribute('src', 'musicSamples/piano_c_1.mp3');
+                row1btn2.setAttribute('src', 'musicSamples/piano_d_1.mp3');
+                row1btn3.setAttribute('src', 'musicSamples/piano_e_1.mp3');
+                row1btn4.setAttribute('src', 'musicSamples/piano_f_1.mp3');
+                row1btn5.setAttribute('src', 'musicSamples/piano_g_1.mp3');
+                row1btn6.setAttribute('src', 'musicSamples/piano_a_1.mp3');
+                row1btn7.setAttribute('src', 'musicSamples/piano_b_1.mp3');
+                row1btn8.setAttribute('src', 'musicSamples/piano_c_2.mp3');
 
 
 
+            });
+            $("#keyboard").on('click', function() {
 
+                row1btn1.setAttribute('src', 'musicSamples/keyboard_c_1.mp3');
+            });
 
-                    //if option is clicked, then variable names for instruments will change
-                    var row1btn1 = document.createElement('audio');
-                    var row1btn2 = document.createElement('audio');
-                    var row1btn3 = document.createElement('audio');
-                    var row1btn4 = document.createElement('audio');
-                    var row1btn5 = document.createElement('audio');
-                    var row1btn6 = document.createElement('audio');
-                    var row1btn7 = document.createElement('audio');
-                    var row1btn8 = document.createElement('audio');
 
-                    var row2btn1 = document.createElement('audio');
-                    var row2btn2 = document.createElement('audio');
-                    var row2btn3 = document.createElement('audio');
-                    var row2btn4 = document.createElement('audio');
-                    var row2btn5 = document.createElement('audio');
-                    var row2btn6 = document.createElement('audio');
-                    var row2btn7 = document.createElement('audio');
-                    var row2btn8 = document.createElement('audio');
+            $("#section1-btn1").click(function() {
+                row1btn1.play();
 
-                    var row3btn1 = document.createElement('audio');
-                    var row3btn2 = document.createElement('audio');
-                    var row3btn3 = document.createElement('audio');
-                    var row3btn4 = document.createElement('audio');
-                    var row3btn5 = document.createElement('audio');
-                    var row3btn6 = document.createElement('audio');
-                    var row3btn7 = document.createElement('audio');
-                    var row3btn8 = document.createElement('audio');
+            });
+            $("#section1-btn2").click(function() {
+                row1btn2.play();
 
-                    var row4btn1 = document.createElement('audio');
-                    var row4btn2 = document.createElement('audio');
-                    var row4btn3 = document.createElement('audio');
-                    var row4btn4 = document.createElement('audio');
-                    var row4btn5 = document.createElement('audio');
-                    var row4btn6 = document.createElement('audio');
-                    var row4btn7 = document.createElement('audio');
-                    var row4btn8 = document.createElement('audio');
+            });
+            $("#section1-btn3").click(function() {
+                row1btn3.play();
 
+            });
+            $("#section1-btn4").click(function() {
+                row1btn4.play();
 
+            });
+            $("#section1-btn5").click(function() {
+                row1btn5.play();
 
+            });
+            $("#section1-btn6").click(function() {
+                row1btn6.play();
 
+            });
+            $("#section1-btn7").click(function() {
+                row1btn7.play();
 
+            });
+            $("#section1-btn8").click(function() {
+                row1btn8.play();
 
+            });
 
+            $("#section2-btn1").click(function() {
+                row2btn1.play();
 
+            });
+            $("#section2-btn2").click(function() {
+                row2btn2.play();
 
-                    $("#piano").on('click', function() {
+            });
+            $("#section2-btn3").click(function() {
+                row2btn3.play();
 
-                        row1btn1.setAttribute('src', 'musicSamples/piano_c_1.mp3');
-                        row1btn2.setAttribute('src', 'musicSamples/piano_d_1.mp3');
-                        row1btn3.setAttribute('src', 'musicSamples/piano_e_1.mp3');
-                        row1btn4.setAttribute('src', 'musicSamples/piano_f_1.mp3');
-                        row1btn5.setAttribute('src', 'musicSamples/piano_g_1.mp3');
-                        row1btn6.setAttribute('src', 'musicSamples/piano_a_1.mp3');
-                        row1btn7.setAttribute('src', 'musicSamples/piano_g_1.mp3');
-                        row1btn8.setAttribute('src', 'musicSamples/piano_c_2.mp3');
-                        
+            });
+            $("#section2-btn4").click(function() {
+                row2btn4.play();
 
+            });
+            $("#section2-btn5").click(function() {
+                row2btn5.play();
 
-                    });
-                    $("#keyboard").on('click', function() {
+            });
+            $("#section2-btn6").click(function() {
+                row2btn6.play();
 
-                        row1btn1.setAttribute('src', 'musicSamples/keyboard_c_1.mp3');
-                    });
+            });
+            $("#section2-btn7").click(function() {
+                row2btn7.play();
 
+            });
+            $("#section2-btn8").click(function() {
+                row2btn8.play();
 
-                    $("#section1-btn1").click(function() {
-                        row1btn1.play();
+            });
 
-                    });
-                    $("#section1-btn2").click(function() {
-                        row1btn2.play();
+            $("#section3-btn1").click(function() {
+                row3btn1.play();
 
-                    });
-                    $("#section1-btn3").click(function() {
-                        row1btn3.play();
+            });
+            $("#section3-btn2").click(function() {
+                row3btn2.play();
 
-                    });
-                    $("#section1-btn4").click(function() {
-                        row1btn4.play();
+            });
+            $("#section3-btn3").click(function() {
+                row3btn3.play();
 
-                    });
-                    $("#section1-btn5").click(function() {
-                        row1btn5.play();
 
-                    });
-                    $("#section1-btn6").click(function() {
-                        row1btn6.play();
+            });
+            $("#section3-btn4").click(function() {
+                row3btn4.play();
 
-                    });
-                    $("#section1-btn7").click(function() {
-                        row1btn7.play();
+            });
+            $("#section3-btn5").click(function() {
+                row3btn5.play();
 
-                    });
-                    $("#section1-btn8").click(function() {
-                        row1btn8.play();
+            });
+            $("#section3-btn6").click(function() {
+                row3btn6.play();
 
-                    });
+            });
+            $("#section3-btn7").click(function() {
+                row3btn7.play();
 
-                    $("#section2-btn1").click(function() {
-                        row2btn1.play();
+            });
+            $("#section3-btn8").click(function() {
+                row3btn8.play();
 
-                    });
-                    $("#section2-btn2").click(function() {
-                        row2btn2.play();
+            });
 
-                    });
-                    $("#section2-btn3").click(function() {
-                        row2btn3.play();
+            $("#section4-btn1").click(function() {
+                row4btn1.play();
 
-                    });
-                    $("#section2-btn4").click(function() {
-                        row2btn4.play();
+            });
+            $("#section4-btn2").click(function() {
+                row4btn2.play();
 
-                    });
-                    $("#section2-btn5").click(function() {
-                        row2btn5.play();
+            });
+            $("#section4-btn3").click(function() {
+                row4btn3.play();
 
-                    });
-                    $("#section2-btn6").click(function() {
-                        row2btn6.play();
+            });
+            $("#section4-btn4").click(function() {
+                row4btn4.play();
 
-                    });
-                    $("#section2-btn7").click(function() {
-                        row2btn7.play();
+            });
+            $("#section4-btn5").click(function() {
+                row4btn5.play();
 
-                    });
-                    $("#section2-btn8").click(function() {
-                        row2btn8.play();
+            });
+            $("#section4-btn6").click(function() {
+                row4btn6.play();
 
-                    });
+            });
+            $("#section4-btn7").click(function() {
+                row4btn7.play();
 
-                    $("#section3-btn1").click(function() {
-                        row3btn1.play();
+            });
+            $("#section4-btn8").click(function() {
+                row4btn8.play();
 
-                    });
-                    $("#section3-btn2").click(function() {
-                        row3btn2.play();
+            });
+            
+            
+  
 
-                    });
-                    $("#section3-btn3").click(function() {
-                        row3btn3.play();
 
 
-                    });
-                    $("#section3-btn4").click(function() {
-                        row3btn4.play();
 
-                    });
-                    $("#section3-btn5").click(function() {
-                        row3btn5.play();
 
-                    });
-                    $("#section3-btn6").click(function() {
-                        row3btn6.play();
-
-                    });
-                    $("#section3-btn7").click(function() {
-                        row3btn7.play();
-
-                    });
-                    $("#section3-btn8").click(function() {
-                        row3btn8.play();
-
-                    });
-
-                    $("#section4-btn1").click(function() {
-                        row4btn1.play();
-
-                    });
-                    $("#section4-btn2").click(function() {
-                        row4btn2.play();
-
-                    });
-                    $("#section4-btn3").click(function() {
-                        row4btn3.play();
-
-                    });
-                    $("#section4-btn4").click(function() {
-                        row4btn4.play();
-
-                    });
-                    $("#section4-btn5").click(function() {
-                        row4btn5.play();
-
-                    });
-                    $("#section4-btn6").click(function() {
-                        row4btn6.play();
-
-                    });
-                    $("#section4-btn7").click(function() {
-                        row4btn7.play();
-
-                    });
-                    $("#section4-btn8").click(function() {
-                        row4btn8.play();
-
-                    });
         });
 
 
@@ -882,34 +950,34 @@
 
 
 
-                    /*font ideas:
-                                font-family: 'Quattrocento Sans', sans-serif;
-                            
-                                font-family: 'Forum', cursive;
-                             
-                                font-family: 'Quicksand', sans-serif;
-                                
-                                NIGHT MODE:
-                                font-family: 'Raleway Dots', cursive
+        /*font ideas:
+                    font-family: 'Quattrocento Sans', sans-serif;
+                
+                    font-family: 'Forum', cursive;
+                 
+                    font-family: 'Quicksand', sans-serif;
+                    
+                    NIGHT MODE:
+                    font-family: 'Raleway Dots', cursive
 
-                    //color ideas:
-                    #bbfaf8   aqua
-                    #bbdcfa   blue
-                    #bbbdfa   purple
-                    #d9bbfa   lavendar
-                    #f8bbfa   pink
-                    #fabbdc   coral
+        //color ideas:
+        #bbfaf8   aqua
+        #bbdcfa   blue
+        #bbbdfa   purple
+        #d9bbfa   lavendar
+        #f8bbfa   pink
+        #fabbdc   coral
 
-                    #e0ffff light cyan
+        #e0ffff light cyan
 
 
-                    #e0ffff
-                    #e0f0ff
-                    #e0e0ff
-                    #f0e0ff
-                    #ffe0ff
-                    #ffe0f0  similar to other theme but more opaque
-                    */
+        #e0ffff
+        #e0f0ff
+        #e0e0ff
+        #f0e0ff
+        #ffe0ff
+        #ffe0f0  similar to other theme but more opaque
+        */
     </script>
 </body>
 
