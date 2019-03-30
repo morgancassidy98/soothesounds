@@ -21,6 +21,7 @@
             transform: translate(-50%, -50%);
             padding: 3em;
             display: none;
+            z-index:-1;
 
         }
 
@@ -102,7 +103,7 @@
         main {
 
             display: grid;
-            z-index: 1;
+            z-index: 2;
 
             /*transform: translate(-50%, -50%);*/
             width: 84%;
@@ -660,25 +661,21 @@
                 $("#pause-btn").toggle().toggleClass("active");
                 var arrayLength = clickedElements.length;
                 if ($("#pause-btn").hasClass("active")){
-                for (var i = 1; i < arrayLength-1; i++) {
+                for (var i = 0; i < arrayLength-1; i++) {
                     console.log(clickedElements[i]);
                     clickedElements[i].click();
                     setTimeout(function(){ 
                     clickedElements[i].click()}, 1000);
-                    console.log(clickedElements[i]);
-                    clickedElements[i].click();
+                  
                     setTimeout(function(){ 
                     clickedElements[i].click()}, 1000);
-                     console.log(clickedElements[i]);
-                    clickedElements[i].click();
+                    
                     setTimeout(function(){ 
                     clickedElements[i].click()}, 1000);
-                     console.log(clickedElements[i]);
-                    clickedElements[i].click();
+               
                     setTimeout(function(){ 
                     clickedElements[i].click()}, 1000);
-                     console.log(clickedElements[i]);
-                    clickedElements[i].click();
+                  
                     setTimeout(function(){ 
                     clickedElements[i].click()}, 1000);
                     
