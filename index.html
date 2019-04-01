@@ -333,7 +333,21 @@
             left: 50%;
             animation: glide 2s;
         }
-
+        .help-box{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:10%;
+            height:10%;
+            padding:1em;
+            border-radius:10px;
+            background-color:white;
+            opacity:.7;
+            text-align:center;
+            display:none;
+        
+        }
 
 
 
@@ -555,6 +569,15 @@
 
 
         </div>
+        <div class="help-box" id="play-help">
+            Play a random song based on your selected instruments.
+        </div>
+        <div class="help-box" id="record-help">
+           Record your own voice, or whatever else you want.
+        </div>
+         <div class="help-box" id="download-help">
+          Download your recording.
+        </div>
     </div>
 
 
@@ -654,6 +677,11 @@
                 return clickedElements;
 
             });
+            $("#record-stop").mouseover(function(){
+                $("#record-help").show().fadeOut(5000);
+                 
+                
+            });
 
             $("#play-pause").click(function() {
                 $("#play-btn").toggle().toggleClass("active");
@@ -693,6 +721,17 @@
 
 
             });
+            $("#play-pause").mouseover(function(){
+                $("#play-help").show().fadeOut(5000);
+              
+                
+            });
+            $("#download").mouseover(function(){
+                $("#download-help").show().fadeOut(5000);
+                
+            });
+            
+            
 
             $("#day").click(function() {
                 $("#day i").hide();
