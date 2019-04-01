@@ -21,7 +21,7 @@
             transform: translate(-50%, -50%);
             padding: 3em;
             display: none;
-            z-index:-1;
+            z-index: -1;
 
         }
 
@@ -167,9 +167,7 @@
         }
 
         #listen-page {
-            /*display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 1em;*/
+
             display: none;
 
 
@@ -180,13 +178,13 @@
             border-radius: 5px;
             cursor: pointer;
             padding: .5em;
-            
+
 
         }
 
         .button:hover {
             opacity: .8;
-            background-color: #e0e0ff;
+            background-color: #d0f0c0;
 
         }
 
@@ -230,7 +228,7 @@
         }
 
         .option:hover {
-            background-color: #ffe0ff;
+            background-color: #bbdcfa;
         }
 
         a {
@@ -241,8 +239,8 @@
         }
 
         a:active {
-            color: #e0ffff;
-            background-color: #e0ffff;
+            color: #bbdcfa;
+            background-color: #bbdcfa;
             opacity: .8;
         }
 
@@ -252,7 +250,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100%;
+            width: 90%;
             height: 75%;
             display: grid;
             background-color: #bbdcfa;
@@ -260,9 +258,8 @@
             border-radius: 10px;
             align-items: center;
             padding: 1em;
-            justify-items: center;
-            grid-template-columns: repeat(4, 25vw);
-
+            justify-items: space-around;
+            grid-template-columns: repeat(4, 23vw);
             grid-row-gap: 1em;
             grid-column-gap: 1em;
         }
@@ -273,7 +270,7 @@
             width: 60%;
             height: auto;
             align-items: center;
-            justify-items: center;
+
         }
 
         .row {
@@ -420,28 +417,31 @@
         <div id="create" class="button"><i class="material-icons">
                 create
             </i>Create</div>
-     
+
 
     </div>
-    
-<!--
+
+
     <div id="listen-page">
 
         <div id="playlist">
             <div class="box" id="box1">Playlist 1<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box2">Playlist 2<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box3">Playlist 3<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box4">Playlist 4<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box5"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box6"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box2">Playlist 2<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box3">Playlist 3<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box4">Playlist 4<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box5"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box6"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box7"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box8"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box9"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23bbdcfa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box8"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box9"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box10"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box11"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box12"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
 
         </div>
 
     </div>
--->
+
 
 
 
@@ -571,8 +571,8 @@
         $(".title").hide();
         $(".title").fadeIn(6000);
         $(document).ready(function() {
-            $(".music-btn").click(function(){
-                console.log("I was clicked!!!!");
+            $(".music-btn").click(function() {
+
             });
 
 
@@ -598,16 +598,16 @@
                 $(".title").hide();
                 $("#listen-page").show();
                 $("header").show();
-                $("#listen-nav").css("background-color", "#e0ffff");
-                $("#listen-nav-2").css("background-color", "#e0ffff");
+                $("#listen-nav").css("background-color", "#bbdcfa");
+                $("#listen-nav-2").css("background-color", "#bbdcfa");
 
             });
             $("#create").click(function() {
                 $(".title").hide();
                 $("#create-page").show();
                 $("header").show();
-                $("#create-nav").css("background-color", "#e0ffff");
-                $("#create-nav-2").css("background-color", "#e0ffff");
+                $("#create-nav").css("background-color", "#bbdcfa");
+                $("#create-nav-2").css("background-color", "#bbdcfa");
 
 
             });
@@ -623,74 +623,77 @@
 
             $(".top-nav li").click(function() {
                 $(".top-nav li").css("background-color", "white");
-                $(this).css("background-color", "#e0ffff");
+                $(this).css("background-color", "#bbdcfa");
 
             });
             var clickedElements = new Array();
             $("#record-stop").click(function() {
-                 
-                
+
+
                 $("#record-btn").toggle().toggleClass("active");
                 $("#stop-btn").toggle().toggleClass("active");
-                if ($("#stop-btn").hasClass("active")){
-                console.log("active");
-                $("body").click(function(e) {
+                if ($("#stop-btn").hasClass("active")) {
+                    console.log("active");
+                    $("body").click(function(e) {
 
-                var clicked = $(e.target);
-                clickedElements.push(clicked);
-                console.log(clickedElements);
-                  
-                
-              });
-          
-                
-                
-            }
-                else{
-                    $("body").click(function(e){
-                       clickedElements.pop($("#stop-btn"));
+                        var clicked = $(e.target);
+                        clickedElements.push(clicked);
+                        console.log(clickedElements);
+
+
                     });
-                    
+
+
+
+                } else {
+                    $("body").click(function(e) {
+                        clickedElements.pop($("#stop-btn"));
+                    });
+
                 }
                 return clickedElements;
-              
-         });
+
+            });
 
             $("#play-pause").click(function() {
                 $("#play-btn").toggle().toggleClass("active");
                 $("#pause-btn").toggle().toggleClass("active");
                 var arrayLength = clickedElements.length;
-                if ($("#pause-btn").hasClass("active")){
-                for (var i = 0; i < arrayLength-1; i++) {
-                    console.log(clickedElements[i]);
-                    clickedElements[i].click();
-                    setTimeout(function(){ 
-                    clickedElements[i].click()}, 1000);
-                  
-                    setTimeout(function(){ 
-                    clickedElements[i].click()}, 1000);
-                    
-                    setTimeout(function(){ 
-                    clickedElements[i].click()}, 1000);
-               
-                    setTimeout(function(){ 
-                    clickedElements[i].click()}, 1000);
-                  
-                    setTimeout(function(){ 
-                    clickedElements[i].click()}, 1000);
-                    
-                    
-                    
-                   
+                if ($("#pause-btn").hasClass("active")) {
+                    for (var i = 0; i < arrayLength - 1; i++) {
+                        console.log(clickedElements[i]);
+                        clickedElements[i].click();
+                        setTimeout(function() {
+                            clickedElements[i].click()
+                        }, 1000);
+
+                        setTimeout(function() {
+                            clickedElements[i].click()
+                        }, 1000);
+
+                        setTimeout(function() {
+                            clickedElements[i].click()
+                        }, 1000);
+
+                        setTimeout(function() {
+                            clickedElements[i].click()
+                        }, 1000);
+
+                        setTimeout(function() {
+                            clickedElements[i].click()
+                        }, 1000);
+
+
+
+
                     }
-                }
-                else{
+                } else {
                     clickedElements = new Array();
                 }
-       
+
 
             });
-    
+
             $("#day").click(function() {
                 $("#day i").hide();
                 $("#night i").show();
@@ -703,7 +706,7 @@
                 $(".inner-list-button").css("background-color", "rgba(0,0,0, 0.6)	");
                 $("#day-night").addClass("nightmode");
                 $(".option").mouseover(function() {
-                    $(this).css("background-color", "#f8bbfa");
+                    $(this).css("background-color", "#e0f0ff");
                 })
 
 
@@ -717,10 +720,10 @@
                 });
                 $("html").css("filter", "brightness(100%)");
 
-                $(".inner-list-button").css("background-color", "#e0e0ff");
+                $(".inner-list-button").css("background-color", "#d0f0c0");
                 $("#day-night").removeClass("nightmode");
                 $(".option").mouseover(function() {
-                    $(this).css("background-color", "#ffe0ff");
+                    $(this).css("background-color", "#e0f0ff");
                 });
             });
 
@@ -794,7 +797,91 @@
             $("#keyboard").on('click', function() {
 
                 row1btn1.setAttribute('src', 'musicSamples/keyboard_c_1.mp3');
+                row1btn2.setAttribute('src', 'musicSamples/keyboard_d_1.mp3');
+                row1btn3.setAttribute('src', 'musicSamples/keyboard_e_1.mp3');
+                row1btn4.setAttribute('src', 'musicSamples/keyboard_f_1.mp3');
+                row1btn5.setAttribute('src', 'musicSamples/keyboard_g_1.mp3');
+                row1btn6.setAttribute('src', 'musicSamples/keyboard_a_1.mp3');
+                row1btn7.setAttribute('src', 'musicSamples/keyboard_b_1.mp3');
+                row1btn8.setAttribute('src', 'musicSamples/keyboard_c_2.mp3');
             });
+            $("#ocean").on('click', function() {
+                row2btn1.setAttribute('src', 'musicSamples/ocean_1.mp3');
+                row2btn2.setAttribute('src', 'musicSamples/ocean_2.mp3');
+                row2btn3.setAttribute('src', 'musicSamples/ocean_3.mp3');
+                row2btn4.setAttribute('src', 'musicSamples/ocean_4.mp3');
+                row2btn5.setAttribute('src', 'musicSamples/ocean_5.mp3');
+                row2btn6.setAttribute('src', 'musicSamples/ocean_6.mp3');
+                row2btn7.setAttribute('src', 'musicSamples/ocean_7.mp3');
+                row2btn8.setAttribute('src', 'musicSamples/ocean_8.mp3');
+
+
+            });
+            $("#rain").on('click', function() {
+                row2btn1.setAttribute('src', 'musicSamples/rain_1.mp3');
+                row2btn2.setAttribute('src', 'musicSamples/rain_2.mp3');
+                row2btn3.setAttribute('src', 'musicSamples/rain_3.mp3');
+                row2btn4.setAttribute('src', 'musicSamples/rain_4.mp3');
+                row2btn5.setAttribute('src', 'musicSamples/rain_5.mp3');
+                row2btn6.setAttribute('src', 'musicSamples/rain_6.mp3');
+                row2btn7.setAttribute('src', 'musicSamples/rain_6.mp3');
+                row2btn8.setAttribute('src', 'musicSamples/rain_8.mp3');
+
+
+            });
+            $("bongo").on('click', function(){
+                row3btn1.setAttribute('src', 'musicSamples/bongo_1.mp3');
+                row3btn2.setAttribute('src', 'musicSamples/bongo_2.mp3');
+                row3btn3.setAttribute('src', 'musicSamples/bongo_3.mp3');
+                row3btn4.setAttribute('src', 'musicSamples/bongo_4.mp3');
+                row3btn5.setAttribute('src', 'musicSamples/bongo_5.mp3');
+                row3btn6.setAttribute('src', 'musicSamples/bongo_6.mp3');
+                row3btn7.setAttribute('src', 'musicSamples/bongo_7.mp3');
+                row3btn8.setAttribute('src', 'musicSamples/bongo_8.mp3');
+                
+                
+            });
+            $("snare").on('click', function(){
+                row3btn1.setAttribute('src', 'musicSamples/snare_1.mp3');
+                row3btn2.setAttribute('src', 'musicSamples/snare_2.mp3');
+                row3btn3.setAttribute('src', 'musicSamples/snare_3.mp3');
+                row3btn4.setAttribute('src', 'musicSamples/snare_4.mp3');
+                row3btn5.setAttribute('src', 'musicSamples/snare_5.mp3');
+                row3btn6.setAttribute('src', 'musicSamples/snare_6.mp3');
+                row3btn7.setAttribute('src', 'musicSamples/snare_7.mp3');
+                row3btn8.setAttribute('src', 'musicSamples/snare_8.mp3');
+                
+                
+            });
+            $("#bright").on('click', function() {
+
+                row4btn1.setAttribute('src', 'musicSamples/bright_c_1.mp3');
+                row4btn2.setAttribute('src', 'musicSamples/bright_d_1.mp3');
+                row4btn3.setAttribute('src', 'musicSamples/bright_e_1.mp3');
+                row4btn4.setAttribute('src', 'musicSamples/bright_f_1.mp3');
+                row4btn5.setAttribute('src', 'musicSamples/bright_g_1.mp3');
+                row4btn6.setAttribute('src', 'musicSamples/bright_a_1.mp3');
+                row4btn7.setAttribute('src', 'musicSamples/bright_b_1.mp3');
+                row4btn8.setAttribute('src', 'musicSamples/bright_c_2.mp3');
+
+
+
+            });
+               $("#deep").on('click', function() {
+
+                row4btn1.setAttribute('src', 'musicSamples/deep_c_1.mp3');
+                row4btn2.setAttribute('src', 'musicSamples/deep_d_1.mp3');
+                row4btn3.setAttribute('src', 'musicSamples/deep_e_1.mp3');
+                row4btn4.setAttribute('src', 'musicSamples/deep_f_1.mp3');
+                row4btn5.setAttribute('src', 'musicSamples/deep_g_1.mp3');
+                row4btn6.setAttribute('src', 'musicSamples/deep_a_1.mp3');
+                row4btn7.setAttribute('src', 'musicSamples/deep_b_1.mp3');
+                row4btn8.setAttribute('src', 'musicSamples/deep_c_2.mp3');
+
+
+
+            });
+
 
 
             $("#section1-btn1").click(function() {
@@ -929,9 +1016,9 @@
                 row4btn8.play();
 
             });
-            
-            
-  
+
+
+
 
 
 
