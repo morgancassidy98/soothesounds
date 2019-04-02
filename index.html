@@ -545,6 +545,14 @@
             </main>
         </div>
         <div class="controls">
+            <div id="play-pause" class="control-button"><i class="material-icons active" id="play-btn">
+                    play_circle_outline
+                </i>
+
+                <div class="control-button"><i class="material-icons" id="pause-btn">
+                        pause_circle_outline
+                    </i></div>
+            </div>
 
             <div id="record-stop" class="control-button"><i class="material-icons active" id="record-btn">
                     fiber_manual_record
@@ -556,14 +564,7 @@
 
             </div>
 
-            <div id="play-pause" class="control-button"><i class="material-icons active" id="play-btn">
-                    play_circle_outline
-                </i>
 
-                <div class="control-button"><i class="material-icons" id="pause-btn">
-                        pause_circle_outline
-                    </i></div>
-            </div>
 
             <div id="download" class="control-button"><i class="material-icons">
                     arrow_downward
@@ -595,6 +596,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+        window.browser = (function() {
+            return window.msBrowser ||
+                window.browser ||
+                window.chrome;
+        })();
+
         $(".title").hide();
         $(".title").fadeIn(6000);
         $(document).ready(function() {
@@ -665,7 +672,7 @@
 
                         var clicked = $(e.target);
                         clickedElements.push(clicked);
-                        
+
 
 
                     });
@@ -684,7 +691,7 @@
             $("#record-stop").mouseover(function() {
                 $(".help-box").hide();
                 $("#record-help").show().fadeOut(5000);
-                
+
 
 
             });
@@ -695,13 +702,13 @@
                 var arrayLength = clickedElements.length;
                 if ($("#pause-btn").hasClass("active")) {
                     for (var i = 0; i < arrayLength - 1; i++) {
-                        
+
                         clickedElements[i].click();
                         setTimeout(function() {
                             clickedElements[i].click()
                         }, 1000);
 
-                  }
+                    }
                 } else {
                     clickedElements = new Array();
                 }
