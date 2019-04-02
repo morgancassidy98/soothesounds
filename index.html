@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en">
 
 <head>
     <title>Soothe Sounds</title>
@@ -461,6 +462,7 @@
 
 
 
+
     <div id="create-page">
 
 
@@ -596,11 +598,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        window.browser = (function() {
-            return 
-                window.chrome;
-        })();
-
         $(".title").hide();
         $(".title").fadeIn(6000);
         $(document).ready(function() {
@@ -659,34 +656,55 @@
                 $(this).css("background-color", "#bbdcfa");
 
             });
-            var clickedElements = new Array();
+            var recorder, gumStream;
+            //var recordButton = document.getElementById("recordButton");
+            //recordButton.addEventListener("click", toggleRecording);
+
+            function toggleRecording() {
+                if (recorder && recorder.state == "recording") {
+                    recorder.stop();
+                    gumStream.getAudioTracks()[0].stop();
+                } else {
+                    navigator.mediaDevices.getUserMedia({
+                        audio: true
+                    }).then(function(stream) {
+                        gumStream = stream;
+                        recorder = new MediaRecorder(stream);
+                        recorder.ondataavailable = function(e) {
+                            var url = URL.createObjectURL(e.data);
+                            var preview = document.createElement('audio');
+                            preview.id ="download-link";
+                            //preview.addClass("download-link");
+                            preview.controls = true;
+                            preview.src = url;
+                            document.body.appendChild(preview);
+                        };
+                        recorder.start();
+                    });
+                }
+
+            }
+
+
             $("#record-stop").click(function() {
 
 
                 $("#record-btn").toggle().toggleClass("active");
                 $("#stop-btn").toggle().toggleClass("active");
-                if ($("#stop-btn").hasClass("active")) {
-                    console.log("active");
-                    $("body").click(function(e) {
 
-                        var clicked = $(e.target);
-                        clickedElements.push(clicked);
+                toggleRecording();
 
 
 
-                    });
 
 
 
-                } else {
-                    $("body").click(function(e) {
-                        clickedElements.pop($("#stop-btn"));
-                    });
 
-                }
-                return clickedElements;
+
 
             });
+
+
             $("#record-stop").mouseover(function() {
                 $(".help-box").hide();
                 $("#record-help").show().fadeOut(5000);
@@ -700,24 +718,27 @@
                 $("#pause-btn").toggle().toggleClass("active");
                 var arrayLength = clickedElements.length;
                 if ($("#pause-btn").hasClass("active")) {
-                    for (var i = 0; i < arrayLength - 1; i++) {
+                    //var index = //random number between ? and ?
+                    //element of index.click();
+                    //16 times?
 
-                        clickedElements[i].click();
-                        setTimeout(function() {
-                            clickedElements[i].click()
-                        }, 1000);
-
-                    }
                 } else {
-                    clickedElements = new Array();
+                    //stop playing song
+
+
+
                 }
-
-
             });
             $("#play-pause").mouseover(function() {
                 $(".help-box").hide();
                 $("#play-help").show().fadeOut(5000);
 
+
+            });
+
+            $("#download").click(function() {
+                var audioimgsrc = document.getElementById("download-link").src;
+                window.open(audioimgsrc);
 
             });
             $("#download").mouseover(function() {
@@ -1061,44 +1082,36 @@
 
 
 
-        });
 
-
-
-
-
-
-
-
-
-        /*font ideas:
-                    font-family: 'Quattrocento Sans', sans-serif;
-                
-                    font-family: 'Forum', cursive;
-                 
-                    font-family: 'Quicksand', sans-serif;
+            /*font ideas:
+                        font-family: 'Quattrocento Sans', sans-serif;
                     
-                    NIGHT MODE:
-                    font-family: 'Raleway Dots', cursive
+                        font-family: 'Forum', cursive;
+                     
+                        font-family: 'Quicksand', sans-serif;
+                        
+                        NIGHT MODE:
+                        font-family: 'Raleway Dots', cursive
 
-        //color ideas:
-        #bbfaf8   aqua
-        #bbdcfa   blue
-        #bbbdfa   purple
-        #d9bbfa   lavendar
-        #f8bbfa   pink
-        #fabbdc   coral
+            //color ideas:
+            #bbfaf8   aqua
+            #bbdcfa   blue
+            #bbbdfa   purple
+            #d9bbfa   lavendar
+            #f8bbfa   pink
+            #fabbdc   coral
 
-        #e0ffff light cyan
+            #e0ffff light cyan
 
 
-        #e0ffff
-        #e0f0ff
-        #e0e0ff
-        #f0e0ff
-        #ffe0ff
-        #ffe0f0  similar to other theme but more opaque
-        */
+            #e0ffff
+            #e0f0ff
+            #e0e0ff
+            #f0e0ff
+            #ffe0ff
+            #ffe0f0  similar to other theme but more opaque
+            */
+        });
     </script>
 </body>
 
