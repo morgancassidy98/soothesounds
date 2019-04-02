@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Soothe Sounds</title>
@@ -7,12 +7,11 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Forum|Poiret+One|Quattrocento+Sans|Quicksand|Raleway+Dots|PT+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-   
         body {
             font-family: 'Quicksand', sans-serif;
             user-select: none;
             overflow: hidden;
-            
+
 
         }
 
@@ -335,20 +334,21 @@
             left: 50%;
             animation: glide 2s;
         }
-        .help-box{
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform: translate(-50%,-50%);
-            width:10%;
-            height:10%;
-            padding:1em;
-            border-radius:10px;
-            background-color:white;
-            opacity:.7;
-            text-align:center;
-            display:none;
-        
+
+        .help-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10%;
+            height: 10%;
+            padding: 1em;
+            border-radius: 10px;
+            background-color: white;
+            opacity: .7;
+            text-align: center;
+            display: none;
+
         }
 
 
@@ -575,14 +575,14 @@
             Play a random song based on your selected instruments.
         </div>
         <div class="help-box" id="record-help">
-           Record your own voice, or whatever else you want.
+            Record your own voice, or whatever else you want.
         </div>
-         <div class="help-box" id="download-help">
-          Download your recording.
+        <div class="help-box" id="download-help">
+            Download your recording.
         </div>
     </div>
-    
-    
+
+
 
 
 
@@ -665,7 +665,7 @@
 
                         var clicked = $(e.target);
                         clickedElements.push(clicked);
-                        console.log(clickedElements);
+                        
 
 
                     });
@@ -681,11 +681,12 @@
                 return clickedElements;
 
             });
-            $("#record-stop").mouseover(function(){
+            $("#record-stop").mouseover(function() {
                 $(".help-box").hide();
                 $("#record-help").show().fadeOut(5000);
-                 
                 
+
+
             });
 
             $("#play-pause").click(function() {
@@ -694,51 +695,32 @@
                 var arrayLength = clickedElements.length;
                 if ($("#pause-btn").hasClass("active")) {
                     for (var i = 0; i < arrayLength - 1; i++) {
-                        console.log(clickedElements[i]);
+                        
                         clickedElements[i].click();
                         setTimeout(function() {
                             clickedElements[i].click()
                         }, 1000);
 
-                        setTimeout(function() {
-                            clickedElements[i].click()
-                        }, 1000);
-
-                        setTimeout(function() {
-                            clickedElements[i].click()
-                        }, 1000);
-
-                        setTimeout(function() {
-                            clickedElements[i].click()
-                        }, 1000);
-
-                        setTimeout(function() {
-                            clickedElements[i].click()
-                        }, 1000);
-
-
-
-
-                    }
+                  }
                 } else {
                     clickedElements = new Array();
                 }
 
 
             });
-            $("#play-pause").mouseover(function(){
+            $("#play-pause").mouseover(function() {
                 $(".help-box").hide();
                 $("#play-help").show().fadeOut(5000);
-              
-                
+
+
             });
-            $("#download").mouseover(function(){
+            $("#download").mouseover(function() {
                 $(".help-box").hide();
                 $("#download-help").show().fadeOut(5000);
-                
+
             });
-            
-            
+
+
 
             $("#day").click(function() {
                 $("#day i").hide();
@@ -753,7 +735,7 @@
                 $("#day-night").addClass("nightmode");
                 $(".option").mouseover(function() {
                     $(this).css("background-color", "#e0f0ff");
-                    
+
                 })
                 $(".help-box").css("color", "black");
 
@@ -773,7 +755,7 @@
                 $(".option").mouseover(function() {
                     $(this).css("background-color", "#e0f0ff");
                 });
-                
+
             });
 
 
@@ -878,7 +860,7 @@
 
 
             });
-            $("bongo").on('click', function(){
+            $("bongo").on('click', function() {
                 row3btn1.setAttribute('src', 'musicSamples/bongo_1.mp3');
                 row3btn2.setAttribute('src', 'musicSamples/bongo_2.mp3');
                 row3btn3.setAttribute('src', 'musicSamples/bongo_3.mp3');
@@ -887,10 +869,10 @@
                 row3btn6.setAttribute('src', 'musicSamples/bongo_6.mp3');
                 row3btn7.setAttribute('src', 'musicSamples/bongo_7.mp3');
                 row3btn8.setAttribute('src', 'musicSamples/bongo_8.mp3');
-                
-                
+
+
             });
-            $("snare").on('click', function(){
+            $("snare").on('click', function() {
                 row3btn1.setAttribute('src', 'musicSamples/snare_1.mp3');
                 row3btn2.setAttribute('src', 'musicSamples/snare_2.mp3');
                 row3btn3.setAttribute('src', 'musicSamples/snare_3.mp3');
@@ -899,8 +881,8 @@
                 row3btn6.setAttribute('src', 'musicSamples/snare_6.mp3');
                 row3btn7.setAttribute('src', 'musicSamples/snare_7.mp3');
                 row3btn8.setAttribute('src', 'musicSamples/snare_8.mp3');
-                
-                
+
+
             });
             $("#bright").on('click', function() {
 
@@ -916,7 +898,7 @@
 
 
             });
-               $("#deep").on('click', function() {
+            $("#deep").on('click', function() {
 
                 row4btn1.setAttribute('src', 'musicSamples/deep_c_1.mp3');
                 row4btn2.setAttribute('src', 'musicSamples/deep_d_1.mp3');
