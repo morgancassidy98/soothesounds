@@ -601,6 +601,16 @@
         $(".title").hide();
         $(".title").fadeIn(6000);
         $(document).ready(function() {
+            var chrome = navigator.userAgent.indexOf('Chrome') > -1;
+            var explorer = navigator.userAgent.indexOf('MSIE') > -1;
+            var firefox = navigator.userAgent.indexOf('Firefox') > -1;
+            var safari = navigator.userAgent.indexOf("Safari") > -1;
+            var camino = navigator.userAgent.indexOf("Camino") > -1;
+            var opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
+            if (chrome == false){
+                alert("Please open this website in Chrome. Thank you for your patience.");
+            }
+            
             $(".music-btn").click(function() {
 
             });
@@ -673,7 +683,7 @@
                         recorder.ondataavailable = function(e) {
                             var url = URL.createObjectURL(e.data);
                             var preview = document.createElement('audio');
-                            preview.id ="download-link";
+                            preview.id = "download-link";
                             //preview.addClass("download-link");
                             preview.controls = true;
                             preview.src = url;
@@ -716,14 +726,30 @@
             $("#play-pause").click(function() {
                 $("#play-btn").toggle().toggleClass("active");
                 $("#pause-btn").toggle().toggleClass("active");
-                var arrayLength = clickedElements.length;
+
                 if ($("#pause-btn").hasClass("active")) {
                     //var index = //random number between ? and ?
+
                     //element of index.click();
+                    /*$( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
+                    console.log("button clicked");
+                    setTimeout()
+                     $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
+                    console.log("button clicked");
+                    
+                     $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
+                    */
+                    $("#section1-btn1").click();
+                    $("#section1-btn2").click();
+
+
+
                     //16 times?
 
                 } else {
                     //stop playing song
+                    console.log("no click");
+
 
 
 
@@ -739,6 +765,7 @@
             $("#download").click(function() {
                 var audioimgsrc = document.getElementById("download-link").src;
                 window.open(audioimgsrc);
+
 
             });
             $("#download").mouseover(function() {
