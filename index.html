@@ -58,6 +58,7 @@
             padding-top: .5em;
             cursor: pointer;
             width: 100%;
+            background-color:#d0f0c0;
 
 
 
@@ -70,6 +71,7 @@
 
         .option {
             padding-bottom: .5em;
+            user-select:none;
         }
 
         #melody {
@@ -175,6 +177,7 @@
 
 
         }
+       
 
         .button {
             border-radius: 5px;
@@ -231,6 +234,9 @@
 
         .option:hover {
             background-color: #bbdcfa;
+        }
+         .option-chosen{
+            background-color:#bbdcfa;
         }
 
         a {
@@ -470,26 +476,26 @@
 
             <div class="opt" id="option1">
                 <div class="inner-list button" id="melody">Melody<br><br>
-                    <div class="option button" id="piano">piano</div>
-                    <div class="option button" id="keyboard">keyboard</div>
+                    <div class="option button melody-opt" id="piano">piano</div>
+                    <div class="option button melody-opt" id="keyboard">keyboard</div>
                 </div>
             </div>
             <div class="opt" id="option2">
                 <div class="inner-list button" id="water">Nature<br><br>
-                    <div class="option button" id="ocean">ocean</div>
-                    <div class="option button" id="rain">rain</div>
+                    <div class="option button water-opt" id="ocean">ocean</div>
+                    <div class="option button water-opt" id="rain">rain</div>
                 </div>
             </div>
             <div class="opt" id="option3">
-                <div class="inner-list button" id="drum">Drum<br><br>
-                    <div class="option button" id="bongo">bongo</div>
-                    <div class="option button" id="snare">snare</div>
+                <div class="inner-list button " id="drum">Drum<br><br>
+                    <div class="option button drum-opt" id="bongo">bongo</div>
+                    <div class="option button drum-opt" id="snare">snare</div>
                 </div>
             </div>
             <div class="opt" id="option4">
                 <div class="inner-list button" id="synth">Synth<br><br>
-                    <div class="option button" id="bright">bright synth</div>
-                    <div class="option button" id="deep">deep synth</div>
+                    <div class="option button synth-opt" id="bright">bright synth</div>
+                    <div class="option button synth-opt " id="deep">deep synth</div>
                 </div>
 
             </div>
@@ -620,20 +626,45 @@
 
 
             $(".inner-list").click(function() {
-                $(".inner-list div").hide();
+                //$(".inner-list div").hide();
+                $(this).show();
                 $(this).find('div').show();
+               
 
             });
             $(".inner-list").mouseover(function() {
-                $(".inner-list div").hide();
+                //$(".inner-list div").hide();
+                $(this).show();
                 $(this).find('div').show();
 
             });
             $(".inner-list").mouseout(function() {
-                $(".inner-list div").hide();
-                $(this).find('div').hide();
+                //$(".inner-list div").hide();
+                
+                //$(this).find('div').hide();
 
             });
+            $(".melody-opt").click(function(){
+                $(".melody-opt").removeClass("option-chosen");
+                $(this).toggleClass("option-chosen");
+                
+            });
+            $(".water-opt").click(function(){
+                $(".water-opt").removeClass("option-chosen");
+                $(this).toggleClass("option-chosen");
+                
+            });
+             $(".drum-opt").click(function(){
+                $(".drum-opt").removeClass("option-chosen");
+                $(this).toggleClass("option-chosen");
+                
+            });
+             $(".synth-opt").click(function(){
+                $(".synth-opt").removeClass("option-chosen");
+                $(this).toggleClass("option-chosen");
+                
+            });
+          
 
             $("#listen").click(function() {
                 $(".title").hide();
