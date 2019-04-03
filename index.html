@@ -58,7 +58,7 @@
             padding-top: .5em;
             cursor: pointer;
             width: 100%;
-            background-color:#d0f0c0;
+            background-color: #d0f0c0;
 
 
 
@@ -71,7 +71,7 @@
 
         .option {
             padding-bottom: .5em;
-            user-select:none;
+            user-select: none;
         }
 
         #melody {
@@ -177,7 +177,7 @@
 
 
         }
-       
+
 
         .button {
             border-radius: 5px;
@@ -235,8 +235,9 @@
         .option:hover {
             background-color: #bbdcfa;
         }
-         .option-chosen{
-            background-color:#bbdcfa;
+
+        .option-chosen {
+            background-color: #bbdcfa;
         }
 
         a {
@@ -613,11 +614,11 @@
             var safari = navigator.userAgent.indexOf("Safari") > -1;
             var camino = navigator.userAgent.indexOf("Camino") > -1;
             var opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
-            if (chrome == false){
+            if (chrome == false) {
                 alert("Soothe Sounds is currently only available on Google Chrome. We apologize for any inconvenience.");
-                      window.open('https://www.google.com/chrome/');
+                window.open('https://www.google.com/chrome/');
             }
-            
+
             $(".music-btn").click(function() {
 
             });
@@ -629,7 +630,7 @@
                 //$(".inner-list div").hide();
                 $(this).show();
                 $(this).find('div').show();
-               
+
 
             });
             $(".inner-list").mouseover(function() {
@@ -640,31 +641,31 @@
             });
             $(".inner-list").mouseout(function() {
                 //$(".inner-list div").hide();
-                
+
                 //$(this).find('div').hide();
 
             });
-            $(".melody-opt").click(function(){
+            $(".melody-opt").click(function() {
                 $(".melody-opt").removeClass("option-chosen");
                 $(this).toggleClass("option-chosen");
-                
+
             });
-            $(".water-opt").click(function(){
+            $(".water-opt").click(function() {
                 $(".water-opt").removeClass("option-chosen");
                 $(this).toggleClass("option-chosen");
-                
+
             });
-             $(".drum-opt").click(function(){
+            $(".drum-opt").click(function() {
                 $(".drum-opt").removeClass("option-chosen");
                 $(this).toggleClass("option-chosen");
-                
+
             });
-             $(".synth-opt").click(function(){
+            $(".synth-opt").click(function() {
                 $(".synth-opt").removeClass("option-chosen");
                 $(this).toggleClass("option-chosen");
-                
+
             });
-          
+
 
             $("#listen").click(function() {
                 $(".title").hide();
@@ -772,10 +773,15 @@
                      $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
                     */
                     $("#section1-btn1").click();
-                    setTimeout(function(){
- $("#section1-btn2").click() ;
-}, 5000);
-                    
+                    setTimeout(function() {
+                        $("#section1-btn2").click();
+                    }, 1000);
+                     setTimeout(function() {
+                        $("#section1-btn3").click();
+                    }, 1000);
+                       $("#section1-btn4").click();
+                    }, 1000);
+
 
 
 
