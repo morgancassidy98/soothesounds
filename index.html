@@ -772,7 +772,10 @@
                      $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
                     */
                     $("#section1-btn1").click();
-                    $("#section1-btn2").click();
+                    setTimeout(function(){
+ $("#section1-btn2").click() ;
+}, 5000);
+                    
 
 
 
