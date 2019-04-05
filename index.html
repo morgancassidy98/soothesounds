@@ -107,7 +107,7 @@
         main {
 
             display: grid;
-            z-index: 2;
+            z-index: 3;
 
             /*transform: translate(-50%, -50%);*/
             width: 84%;
@@ -268,7 +268,7 @@
             align-items: center;
             padding: 1em;
             justify-items: space-around;
-            grid-template-columns: repeat(4, 23vw);
+            grid-template-columns: repeat(3, 33vw);
             grid-row-gap: 1em;
             grid-column-gap: 1em;
         }
@@ -452,15 +452,13 @@
             <div class="box" id="box1">Playlist 1<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box2">Playlist 2<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box3">Playlist 3<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box4">Playlist 4<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box4"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box5"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box6"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box7"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box8"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box9"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box10"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box11"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box12"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box9"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+           
 
         </div>
 
@@ -779,6 +777,7 @@
                      setTimeout(function() {
                         $("#section1-btn3").click();
                     }, 1000);
+                    //try alternating? chaining? different functions for different sequences
                   
 
 
@@ -954,7 +953,7 @@
 
 
             });
-            $("bongo").on('click', function() {
+            $("#bongo").on('click', function() {
                 row3btn1.setAttribute('src', 'musicSamples/bongo_1.mp3');
                 row3btn2.setAttribute('src', 'musicSamples/bongo_2.mp3');
                 row3btn3.setAttribute('src', 'musicSamples/bongo_3.mp3');
@@ -966,7 +965,7 @@
 
 
             });
-            $("snare").on('click', function() {
+            $("#snare").on('click', function() {
                 row3btn1.setAttribute('src', 'musicSamples/snare_1.mp3');
                 row3btn2.setAttribute('src', 'musicSamples/snare_2.mp3');
                 row3btn3.setAttribute('src', 'musicSamples/snare_3.mp3');
