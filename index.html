@@ -173,6 +173,8 @@
         #listen-page {
 
             display: none;
+            width:100%;
+            height:100%;
 
 
 
@@ -255,29 +257,36 @@
 
         #playlist {
             position: absolute;
-            margin-top: 1em;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
+            left:0;
+            
+            margin-top: 10em;
+            /*top: 50%;
+            left: 50%;*/
+            margin-left:auto;
+            margin-right:auto;
+            /*transform: translate(-50%, -50%);*/
+            width: 100%;
             height: 75%;
-            display: grid;
+            display: inline-grid;
             background-color: #bbdcfa;
-            text-align: center;
             border-radius: 10px;
             align-items: center;
             padding: 1em;
-            justify-items: space-around;
+            justify-content:space-between;
             grid-template-columns: repeat(3, 33vw);
+           
             grid-row-gap: 1em;
             grid-column-gap: 1em;
         }
 
-        .playlist iframe {}
+
 
         .box {
-            width: 60%;
-            height: auto;
+              align-items: center;
+            text-align: center;
+            justify-content: center;
+          
+           
             align-items: center;
 
         }
@@ -356,6 +365,22 @@
             opacity: .7;
             text-align: center;
             display: none;
+            font-size: 1.5em;
+
+        }
+
+        #hide-selections {
+            position: absolute;
+            top: 5%;
+            left: 1%;
+            text-align: center;
+
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+
 
         }
 
@@ -449,16 +474,16 @@
     <div id="listen-page">
 
         <div id="playlist">
-            <div class="box" id="box1">Playlist 1<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box2">Playlist 2<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box3">Playlist 3<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box1"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box2"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box3"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box4"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box5"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box6"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box7"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box8"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
             <div class="box" id="box9"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-           
+
 
         </div>
 
@@ -469,6 +494,8 @@
 
 
     <div id="create-page">
+        <div id="hide-selections">Hide Selections</div>
+
 
 
         <nav class="side-nav">
@@ -496,6 +523,7 @@
                     <div class="option button synth-opt" id="bright">bright synth</div>
                     <div class="option button synth-opt " id="deep">deep synth</div>
                 </div>
+
 
             </div>
 
@@ -580,10 +608,10 @@
 
         </div>
         <div class="help-box" id="play-help">
-            Play a random song based on your selected instruments.
+            Play a random song.
         </div>
         <div class="help-box" id="record-help">
-            Record your own voice, or whatever else you want.
+            Record sounds from your computer microphone.
         </div>
         <div class="help-box" id="download-help">
             Download your recording.
@@ -630,6 +658,9 @@
                 $(this).find('div').show();
 
 
+
+
+
             });
             $(".inner-list").mouseover(function() {
                 //$(".inner-list div").hide();
@@ -661,6 +692,10 @@
             $(".synth-opt").click(function() {
                 $(".synth-opt").removeClass("option-chosen");
                 $(this).toggleClass("option-chosen");
+
+            });
+            $("#hide-selections").click(function() {
+                $(".inner-list div").hide();
 
             });
 
@@ -774,11 +809,11 @@
                     setTimeout(function() {
                         $("#section1-btn2").click();
                     }, 1000);
-                     setTimeout(function() {
+                    setTimeout(function() {
                         $("#section1-btn3").click();
                     }, 1000);
                     //try alternating? chaining? different functions for different sequences
-                  
+
 
 
 
@@ -822,9 +857,10 @@
                     "color": "white",
                     "background-color": "rgba(0,0,0, 0.6)"
                 });
+                $(".inner-list-button").css("background-color", "#d0f0c0");
                 $("html").css("filter", "brightness(75%)");
 
-                $(".inner-list-button").css("background-color", "rgba(0,0,0, 0.6)	");
+                $(".inner-list").css("color", "black	");
                 $("#day-night").addClass("nightmode");
                 $(".option").mouseover(function() {
                     $(this).css("background-color", "#e0f0ff");
@@ -1042,68 +1078,192 @@
             });
 
             $("#section2-btn1").click(function() {
+                row2btn2.pause();
+                row2btn3.pause();
+                row2btn4.pause();
+                row2btn5.pause();
+                row2btn6.pause();
+                row2btn7.pause();
+                row2btn8.pause();
                 row2btn1.play();
 
             });
             $("#section2-btn2").click(function() {
+
+                row2btn3.pause();
+                row2btn4.pause();
+                row2btn5.pause();
+                row2btn6.pause();
+                row2btn7.pause();
+                row2btn8.pause();
+                row2btn1.pause();
                 row2btn2.play();
 
             });
             $("#section2-btn3").click(function() {
+                row2btn2.pause();
+
+                row2btn4.pause();
+                row2btn5.pause();
+                row2btn6.pause();
+                row2btn7.pause();
+                row2btn8.pause();
+                row2btn1.pause();
                 row2btn3.play();
 
             });
             $("#section2-btn4").click(function() {
+                row2btn2.pause();
+                row2btn3.pause();
+
+                row2btn5.pause();
+                row2btn6.pause();
+                row2btn7.pause();
+                row2btn8.pause();
+                row2btn1.pause();
                 row2btn4.play();
 
             });
             $("#section2-btn5").click(function() {
+                row2btn2.pause();
+                row2btn3.pause();
+                row2btn4.pause();
+
+                row2btn6.pause();
+                row2btn7.pause();
+                row2btn8.pause();
+                row2btn1.pause();
                 row2btn5.play();
 
             });
             $("#section2-btn6").click(function() {
+                row2btn2.pause();
+                row2btn3.pause();
+                row2btn4.pause();
+                row2btn5.pause();
+
+                row2btn7.pause();
+                row2btn8.pause();
+                row2btn1.pause();
                 row2btn6.play();
 
             });
             $("#section2-btn7").click(function() {
+                row2btn2.pause();
+                row2btn3.pause();
+                row2btn4.pause();
+                row2btn5.pause();
+                row2btn6.pause();
+
+                row2btn8.pause();
+                row2btn1.pause();
                 row2btn7.play();
 
             });
             $("#section2-btn8").click(function() {
+                row2btn2.pause();
+                row2btn3.pause();
+                row2btn4.pause();
+                row2btn5.pause();
+                row2btn6.pause();
+                row2btn7.pause();
+
+                row2btn1.pause();
                 row2btn8.play();
 
             });
 
             $("#section3-btn1").click(function() {
+                row3btn2.pause();
+                row3btn3.pause();
+                row3btn4.pause();
+                row3btn5.pause();
+                row3btn6.pause();
+                row3btn7.pause();
+                row3btn8.pause();
                 row3btn1.play();
 
             });
             $("#section3-btn2").click(function() {
+
+                row3btn3.pause();
+                row3btn4.pause();
+                row3btn5.pause();
+                row3btn6.pause();
+                row3btn7.pause();
+                row3btn8.pause();
+                row3btn1.pause();
                 row3btn2.play();
 
             });
             $("#section3-btn3").click(function() {
+                row3btn2.pause();
+
+                row3btn4.pause();
+                row3btn5.pause();
+                row3btn6.pause();
+                row3btn7.pause();
+                row3btn8.pause();
+                row3btn1.pause();
                 row3btn3.play();
 
 
             });
             $("#section3-btn4").click(function() {
+                row3btn2.pause();
+                row3btn3.pause();
+
+                row3btn5.pause();
+                row3btn6.pause();
+                row3btn7.pause();
+                row3btn8.pause();
+                row3btn1.pause();
                 row3btn4.play();
 
             });
             $("#section3-btn5").click(function() {
+                row3btn2.pause();
+                row3btn3.pause();
+                row3btn4.pause();
+
+                row3btn6.pause();
+                row3btn7.pause();
+                row3btn8.pause();
+                row3btn1.pause();
                 row3btn5.play();
 
             });
             $("#section3-btn6").click(function() {
+                row3btn2.pause();
+                row3btn3.pause();
+                row3btn4.pause();
+                row3btn5.pause();
+
+                row3btn7.pause();
+                row3btn8.pause();
+                row3btn1.pause();
                 row3btn6.play();
 
             });
             $("#section3-btn7").click(function() {
+                row3btn2.pause();
+                row3btn3.pause();
+                row3btn4.pause();
+                row3btn5.pause();
+                row3btn6.pause();
+                row3btn8.pause();
+                row3btn1.pause();
                 row3btn7.play();
 
             });
             $("#section3-btn8").click(function() {
+                row3btn2.pause();
+                row3btn3.pause();
+                row3btn4.pause();
+                row3btn5.pause();
+                row3btn6.pause();
+                row3btn7.pause();
+                row3btn1.pause();
                 row3btn8.play();
 
             });
