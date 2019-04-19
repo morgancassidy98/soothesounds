@@ -173,8 +173,8 @@
         #listen-page {
 
             display: none;
-            width:100%;
-            height:100%;
+            width: 100%;
+            height: 100%;
 
 
 
@@ -257,13 +257,13 @@
 
         #playlist {
             position: absolute;
-            left:0;
-            
-            margin-top: 10em;
+            left: 0;
+
+            margin-top: 6em;
             /*top: 50%;
             left: 50%;*/
-            margin-left:auto;
-            margin-right:auto;
+            margin-left: auto;
+            margin-right: auto;
             /*transform: translate(-50%, -50%);*/
             width: 100%;
             height: 75%;
@@ -272,23 +272,29 @@
             border-radius: 10px;
             align-items: center;
             padding: 1em;
-            
+
             grid-template-columns: repeat(3, 33vw);
-           
+
             grid-row-gap: 1em;
-        
+
         }
 
 
 
         .box {
-              align-items: center;
+            align-items: center;
             text-align: center;
             justify-content: center;
-          
-           
+
+
             align-items: center;
 
+        }
+        .box i:hover{
+            opacity: .8;
+            cursor:pointer;
+            
+            
         }
 
         .row {
@@ -365,13 +371,13 @@
             opacity: .7;
             text-align: center;
             display: none;
-            font-size: 1.5em;
+
 
         }
 
         #hide-selections {
             position: absolute;
-            top: 5%;
+            top: 95%;
             left: 1%;
             text-align: center;
 
@@ -474,15 +480,34 @@
     <div id="listen-page">
 
         <div id="playlist">
-            <div class="box" id="box1"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box2"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box3"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box4"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box5"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box6"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box7"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276742576&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box8"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
-            <div class="box" id="box9"><iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/268138798&color=%23d0f0ca&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>
+            <div class="box" id="box1"><i class="material-icons">
+play_circle_filled
+</i></div>
+            <div class="box" id="box2"><i class="material-icons">
+play_circle_filled
+</i></div>
+            <div class="box" id="box3"><i class="material-icons">
+play_circle_filled
+</i></div>
+            <div class="box" id="box4"><i class="material-icons">
+play_circle_filled
+</i></div>
+            <div class="box" id="box5"><i class="material-icons">
+play_circle_filled
+</i></div>
+            <div class="box" id="box6"><i class="material-icons">
+play_circle_filled
+</i></div>
+            <div class="box" id="box7"><i class="material-icons">
+play_circle_filled
+</i></div>
+            <div class="box" id="box8"><i class="material-icons">
+play_circle_filled
+</i></div>
+            <div class="box" id="box9"><i class="material-icons">
+play_circle_filled
+</i></div>
+
 
 
         </div>
@@ -789,46 +814,7 @@
 
             });
 
-            $("#play-pause").click(function() {
-                $("#play-btn").toggle().toggleClass("active");
-                $("#pause-btn").toggle().toggleClass("active");
 
-                if ($("#pause-btn").hasClass("active")) {
-                    //var index = //random number between ? and ?
-
-                    //element of index.click();
-                    /*$( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
-                    console.log("button clicked");
-                    setTimeout()
-                     $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
-                    console.log("button clicked");
-                    
-                     $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
-                    */
-                    $("#section1-btn1").click();
-                    setTimeout(function() {
-                        $("#section1-btn2").click();
-                    }, 1000);
-                    setTimeout(function() {
-                        $("#section1-btn3").click();
-                    }, 1000);
-                    //try alternating? chaining? different functions for different sequences
-
-
-
-
-
-                    //16 times?
-
-                } else {
-                    //stop playing song
-                    console.log("no click");
-
-
-
-
-                }
-            });
             $("#play-pause").mouseover(function() {
                 $(".help-box").hide();
                 $("#play-help").show().fadeOut(5000);
@@ -1041,10 +1027,61 @@
 
 
             });
+            $("#play-pause").click(function() {
+                $("#play-btn").toggle().toggleClass("active");
+                $("#pause-btn").toggle().toggleClass("active");
+
+                if ($("#pause-btn").hasClass("active")) {
+                    //var index = //random number between ? and ?
+
+                    //element of index.click();
+                    /*$( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
+                    console.log("button clicked");
+                    setTimeout()
+                     $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
+                    console.log("button clicked");
+                    
+                     $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
+                    */
+                    /*$("#section1-btn1").click();
+                    setTimeout(function() {
+                        $("#section1-btn2").click();
+                    }, 1000);
+                    setTimeout(function() {
+                        $("#section1-btn3").click();
+                    }, 1000);*/
+                    //try alternating? chaining? different functions for different sequences
+                    row1btn1.play();
+                    setTimeout(function() {
+                        row1btn2.play();
+                    }, 1000);
+                     setTimeout(function() {
+                        row1btn3.play();
+                    }, 2000);
+                    
+                  
+
+
+
+
+
+
+                    //16 times?
+
+                } else {
+                    //stop playing song
+                    console.log("no click");
+
+
+
+
+                }
+            });
 
 
 
             $("#section1-btn1").click(function() {
+
                 row1btn1.play();
 
             });
