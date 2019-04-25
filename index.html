@@ -259,7 +259,7 @@
             position: absolute;
             left: 0;
 
-            margin-top: 6em;
+            margin-top: 7em;
             /*top: 50%;
             left: 50%;*/
             margin-left: auto;
@@ -285,17 +285,30 @@
             align-items: center;
             text-align: center;
             justify-content: center;
-
-
             align-items: center;
+            display:flex;
+            flex-direction: column;
 
         }
-        .box i:hover{
+       
+
+      
+
+        .box i:hover {
             opacity: .8;
-            cursor:pointer;
-            
+            cursor: pointer;
+
+        }
+        .box:nth-of-type(even) i{
+            color:#d0f0c0;
             
         }
+        .box:nth-of-type(odd) i{
+          
+            
+        }
+        
+
 
         .row {
             display: grid;
@@ -389,6 +402,12 @@
 
 
         }
+         .box i{
+           font-size: 10em;
+            
+        }
+       
+
 
 
 
@@ -482,31 +501,31 @@
         <div id="playlist">
             <div class="box" id="box1"><i class="material-icons">
 play_circle_filled
-</i></div>
+</i>Summer Day</div>
             <div class="box" id="box2"><i class="material-icons">
 play_circle_filled
-</i></div>
+</i>Spring Day</div>
             <div class="box" id="box3"><i class="material-icons">
 play_circle_filled
-</i></div>
+</i>Calm Winds</div>
             <div class="box" id="box4"><i class="material-icons">
 play_circle_filled
-</i></div>
+</i>Babbling Brook</div>
             <div class="box" id="box5"><i class="material-icons">
 play_circle_filled
-</i></div>
+</i>Chirping Meadow</div>
             <div class="box" id="box6"><i class="material-icons">
 play_circle_filled
-</i></div>
+</i>Peaceful Walk</div>
             <div class="box" id="box7"><i class="material-icons">
 play_circle_filled
-</i></div>
+</i>Nighttime</div>
             <div class="box" id="box8"><i class="material-icons">
 play_circle_filled
-</i></div>
+</i>Breathe</div>
             <div class="box" id="box9"><i class="material-icons">
 play_circle_filled
-</i></div>
+</i>Laughter</div>
 
 
 
@@ -689,8 +708,8 @@ play_circle_filled
             });
             $(".inner-list").mouseover(function() {
                 //$(".inner-list div").hide();
-                $(this).show();
-                $(this).find('div').show();
+                //$(this).show();
+                //$(this).find('div').show();
 
             });
             $(".inner-list").mouseout(function() {
@@ -1055,11 +1074,26 @@ play_circle_filled
                     setTimeout(function() {
                         row1btn2.play();
                     }, 1000);
-                     setTimeout(function() {
+                    setTimeout(function() {
                         row1btn3.play();
                     }, 2000);
-                    
-                  
+                    setTimeout(function() {
+                        row1btn6.play();
+                    }, 3000);
+                    setTimeout(function() {
+                        row1btn8.play();
+                    }, 3000);
+                    setTimeout(function() {
+                        row1btn6.play();
+                    }, 4000);
+                    setTimeout(function() {
+                        row1btn2.play();
+                    }, 4500);
+                    setTimeout(function() {
+                        row1btn4.play();
+                    }, 4500);
+
+
 
 
 
