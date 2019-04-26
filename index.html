@@ -286,28 +286,27 @@
             text-align: center;
             justify-content: center;
             align-items: center;
-            display:flex;
+            display: flex;
             flex-direction: column;
 
         }
-       
 
-      
+
+
 
         .box i:hover {
             opacity: .8;
             cursor: pointer;
 
         }
-        .box:nth-of-type(even) i{
-            color:#d0f0c0;
-            
+
+        .box:nth-of-type(even) i {
+            color: #d0f0c0;
+
         }
-        .box:nth-of-type(odd) i{
-          
-            
-        }
-        
+
+        .box:nth-of-type(odd) i {}
+
 
 
         .row {
@@ -402,11 +401,15 @@
 
 
         }
-         .box i{
-           font-size: 10em;
-            
+
+        .box i {
+            font-size: 10em;
+
         }
-       
+        .listen-pause {
+            display:none;
+        }
+
 
 
 
@@ -499,33 +502,51 @@
     <div id="listen-page">
 
         <div id="playlist">
-            <div class="box" id="box1"><i class="material-icons">
+            <div class="box" id="box1"><i class="material-icons listen-play">
 play_circle_filled
-</i>Summer Day</div>
-            <div class="box" id="box2"><i class="material-icons">
+</i> <i class="material-icons listen-pause"  id="listen-pause-1">
+                        pause_circle_outline
+                    </i>Summer Day</div>
+            <div class="box" id="box2"><i class="material-icons listen-play">
 play_circle_filled
-</i>Spring Day</div>
-            <div class="box" id="box3"><i class="material-icons">
+</i><i class="material-icons listen-pause"  id="listen-pause-2">
+                        pause_circle_outline
+                    </i>Spring Day</div>
+            <div class="box" id="box3"><i class="material-icons listen-play">
 play_circle_filled
-</i>Calm Winds</div>
-            <div class="box" id="box4"><i class="material-icons">
+</i><i class="material-icons listen-pause"  id="listen-pause-3">
+                        pause_circle_outline
+                    </i>Calm Winds</div>
+            <div class="box" id="box4"><i class="material-icons listen-play">
 play_circle_filled
-</i>Babbling Brook</div>
-            <div class="box" id="box5"><i class="material-icons">
+</i><i class="material-icons listen-pause"  id="listen-pause-4">
+                        pause_circle_outline
+                    </i>Babbling Brook</div>
+            <div class="box" id="box5"><i class="material-icons listen-play">
 play_circle_filled
-</i>Chirping Meadow</div>
-            <div class="box" id="box6"><i class="material-icons">
+</i><i class="material-icons listen-pause"  id="listen-pause-5">
+                        pause_circle_outline
+                    </i>Chirping Meadow</div>
+            <div class="box" id="box6"><i class="material-icons listen-play">
 play_circle_filled
-</i>Peaceful Walk</div>
-            <div class="box" id="box7"><i class="material-icons">
+</i><i class="material-icons listen-pause"  id="listen-pause-6">
+                        pause_circle_outline
+                    </i>Peaceful Walk</div>
+            <div class="box" id="box7"><i class="material-icons listen-play">
 play_circle_filled
-</i>Nighttime</div>
-            <div class="box" id="box8"><i class="material-icons">
+</i><i class="material-icons listen-pause"  id="listen-pause-7">
+                        pause_circle_outline
+                    </i>Nighttime</div>
+            <div class="box" id="box8"><i class="material-icons listen-play">
 play_circle_filled
-</i>Breathe</div>
-            <div class="box" id="box9"><i class="material-icons">
+</i><i class="material-icons listen-pause"  id="listen-pause-8">
+                        pause_circle_outline
+                    </i>Breathe</div>
+            <div class="box" id="box9"><i class="material-icons listen-play">
 play_circle_filled
-</i>Laughter</div>
+</i><i class="material-icons listen-pause"  id="listen-pause-9">
+                        pause_circle_outline
+                    </i>Laughter</div>
 
 
 
@@ -852,6 +873,12 @@ play_circle_filled
                 $("#download-help").show().fadeOut(5000);
 
             });
+            $(".box ").click(function(){
+             $(this).find('.listen-pause').toggle();
+            $(this).find(".listen-play").toggle();
+            });
+        
+            
 
 
 
@@ -936,6 +963,26 @@ play_circle_filled
             var row4btn6 = document.createElement('audio');
             var row4btn7 = document.createElement('audio');
             var row4btn8 = document.createElement('audio');
+            
+            var song1 =document.createElement('audio');
+            var song2 = document.createElement('audio');
+            var song3 = document.createElement('audio');
+            var song4 = document.createElement('audio');
+            var song5 = document.createElement('audio');
+            var song6 = document.createElement('audio');
+            var song7 = document.createElement('audio');
+            var song8 = document.createElement('audio');
+            var song9 = document.createElement('audio');
+            
+            song1.setAttribute('src', 'musicSamples/song1.mp3');
+            song2.setAttribute('src', 'musicSamples/song2.mp3');
+            song3.setAttribute('src', 'musicSamples/song3.mp3');
+            song4.setAttribute('src', 'musicSamples/song4.mp3');
+            song5.setAttribute('src', 'musicSamples/song5.mp3');
+            song6.setAttribute('src', 'musicSamples/song6.mp3');
+            song7.setAttribute('src', 'musicSamples/song7.mp3');
+            song8.setAttribute('src', 'musicSamples/song8.mp3');
+            song9.setAttribute('src', 'musicSamples/song9.mp3');
 
 
 
@@ -1371,6 +1418,34 @@ play_circle_filled
                 row4btn8.play();
 
             });
+            
+            $("#box1").click(function(){
+                song1.play();
+               });
+             $("#box2").click(function(){
+                song2.play();
+               });
+             $("#box3").click(function(){
+                song3.play();
+               });
+             $("#box4").click(function(){
+                song4.play();
+               });
+             $("#box5").click(function(){
+                song5.play();
+               });
+             $("#box6").click(function(){
+                song6.play();
+               });
+             $("#box7").click(function(){
+                song7.play();
+               });
+             $("#box8").click(function(){
+                song8.play();
+               });
+             $("#box9").click(function(){
+                song9.play();
+               });
 
 
 
