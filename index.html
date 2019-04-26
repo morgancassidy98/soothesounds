@@ -406,8 +406,9 @@
             font-size: 10em;
 
         }
+
         .listen-pause {
-            display:none;
+            display: none;
         }
 
 
@@ -459,6 +460,7 @@
                 color: white;
             }
         }
+
     </style>
 </head>
 
@@ -504,47 +506,47 @@
         <div id="playlist">
             <div class="box" id="box1"><i class="material-icons listen-play">
 play_circle_filled
-</i> <i class="material-icons listen-pause"  id="listen-pause-1">
+</i> <i class="material-icons listen-pause" id="listen-pause-1">
                         pause_circle_outline
                     </i>Summer Day</div>
             <div class="box" id="box2"><i class="material-icons listen-play">
 play_circle_filled
-</i><i class="material-icons listen-pause"  id="listen-pause-2">
+</i><i class="material-icons listen-pause" id="listen-pause-2">
                         pause_circle_outline
                     </i>Spring Day</div>
             <div class="box" id="box3"><i class="material-icons listen-play">
 play_circle_filled
-</i><i class="material-icons listen-pause"  id="listen-pause-3">
+</i><i class="material-icons listen-pause" id="listen-pause-3">
                         pause_circle_outline
                     </i>Calm Winds</div>
             <div class="box" id="box4"><i class="material-icons listen-play">
 play_circle_filled
-</i><i class="material-icons listen-pause"  id="listen-pause-4">
+</i><i class="material-icons listen-pause" id="listen-pause-4">
                         pause_circle_outline
                     </i>Babbling Brook</div>
             <div class="box" id="box5"><i class="material-icons listen-play">
 play_circle_filled
-</i><i class="material-icons listen-pause"  id="listen-pause-5">
+</i><i class="material-icons listen-pause" id="listen-pause-5">
                         pause_circle_outline
                     </i>Chirping Meadow</div>
             <div class="box" id="box6"><i class="material-icons listen-play">
 play_circle_filled
-</i><i class="material-icons listen-pause"  id="listen-pause-6">
+</i><i class="material-icons listen-pause" id="listen-pause-6">
                         pause_circle_outline
                     </i>Peaceful Walk</div>
             <div class="box" id="box7"><i class="material-icons listen-play">
 play_circle_filled
-</i><i class="material-icons listen-pause"  id="listen-pause-7">
+</i><i class="material-icons listen-pause" id="listen-pause-7">
                         pause_circle_outline
                     </i>Nighttime</div>
             <div class="box" id="box8"><i class="material-icons listen-play">
 play_circle_filled
-</i><i class="material-icons listen-pause"  id="listen-pause-8">
+</i><i class="material-icons listen-pause" id="listen-pause-8">
                         pause_circle_outline
                     </i>Breathe</div>
             <div class="box" id="box9"><i class="material-icons listen-play">
 play_circle_filled
-</i><i class="material-icons listen-pause"  id="listen-pause-9">
+</i><i class="material-icons listen-pause" id="listen-pause-9">
                         pause_circle_outline
                     </i>Laughter</div>
 
@@ -873,12 +875,12 @@ play_circle_filled
                 $("#download-help").show().fadeOut(5000);
 
             });
-            $(".box ").click(function(){
-             $(this).find('.listen-pause').toggle();
-            $(this).find(".listen-play").toggle();
+            $(".box ").click(function() {
+                $(this).find('.listen-pause').toggle();
+                $(this).find(".listen-play").toggle();
             });
-        
-            
+
+
 
 
 
@@ -963,8 +965,8 @@ play_circle_filled
             var row4btn6 = document.createElement('audio');
             var row4btn7 = document.createElement('audio');
             var row4btn8 = document.createElement('audio');
-            
-            var song1 =document.createElement('audio');
+
+            var song1 = document.createElement('audio');
             var song2 = document.createElement('audio');
             var song3 = document.createElement('audio');
             var song4 = document.createElement('audio');
@@ -973,7 +975,7 @@ play_circle_filled
             var song7 = document.createElement('audio');
             var song8 = document.createElement('audio');
             var song9 = document.createElement('audio');
-            
+
             song1.setAttribute('src', 'musicSamples/song1.mp3');
             song2.setAttribute('src', 'musicSamples/song2.mp3');
             song3.setAttribute('src', 'musicSamples/song3.mp3');
@@ -1418,33 +1420,230 @@ play_circle_filled
                 row4btn8.play();
 
             });
-            
-            $("#box1").click(function(){
-                song1.play();
-               });
-             $("#box2").click(function(){
-                song2.play();
-               });
-             $("#box3").click(function(){
+
+            $("#box1").click(function() {
+
+                if (song1.duration > 0 && !song1.paused) {
+                    song1.pause();
+
+
+                } else {
+                    song2.pause();
+                    song3.pause();
+                    song4.pause();
+                    song5.pause();
+                    song6.pause();
+                    song7.pause();
+                    song8.pause();
+                    song9.pause();
+                    song1.play();
+                    
+                  $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+                    
+                    $(this).find(".listen-pause").show();
+
+                }
+            });
+            $("#box2").click(function() {
+                if (song2.duration > 0 && !song2.paused) {
+                    song2.pause();
+
+
+                } else {
+                    song1.pause();
+                    song3.pause();
+                    song4.pause();
+                    song5.pause();
+                    song6.pause();
+                    song7.pause();
+                    song8.pause();
+                    song9.pause();
+                    song2.play();
+                    
+                    $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+                    
+                    $(this).find(".listen-pause").show();
+
+                }
+            });
+            $("#box3").click(function() {
+            if (song3.duration > 0 && !song3.paused){
+                    song3.pause();
+                    
+                    
+                }
+                else{
+                song2.pause();
+                song1.pause();
+                song4.pause();
+                song5.pause();
+                song6.pause();
+                song7.pause();
+                song8.pause();
+                song9.pause();
                 song3.play();
+                    
+                    $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+                    
+                    $(this).find(".listen-pause").show();
+                    
+                }
                });
-             $("#box4").click(function(){
+            $("#box4").click(function() {
+         if (song4.duration > 0 && !song4.paused){
+                    song4.pause();
+                    
+                    
+                }
+                else{
+                song2.pause();
+                song3.pause();
+                song1.pause();
+                song5.pause();
+                song6.pause();
+                song7.pause();
+                song8.pause();
+                song9.pause();
                 song4.play();
+                    
+                $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+                    
+                    $(this).find(".listen-pause").show();
+                    
+                }
                });
-             $("#box5").click(function(){
+            $("#box5").click(function() {
+             if (song5.duration > 0 && !song5.paused){
+                    song5.pause();
+                    
+                    
+                }
+                else{
+                song2.pause();
+                song3.pause();
+                song4.pause();
+                song1.pause();
+                song6.pause();
+                song7.pause();
+                song8.pause();
+                song9.pause();
                 song5.play();
+                    
+                $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+                    
+                    $(this).find(".listen-pause").show();
+                    
+                }
                });
-             $("#box6").click(function(){
+            $("#box6").click(function() {
+            if (song6.duration > 0 && !song6.paused){
+                    song6.pause();
+                    
+                    
+                }
+                else{
+                song2.pause();
+                song3.pause();
+                song4.pause();
+                song5.pause();
+                song1.pause();
+                song7.pause();
+                song8.pause();
+                song9.pause();
                 song6.play();
+                    
+                $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+                    
+                    $(this).find(".listen-pause").show();
+                    
+                }
                });
-             $("#box7").click(function(){
+            $("#box7").click(function() {
+            if (song7.duration > 0 && !song7.paused){
+                    song7.pause();
+                    
+                    
+                }
+                else{
+                song2.pause();
+                song3.pause();
+                song4.pause();
+                song5.pause();
+                song6.pause();
+                song1.pause();
+                song8.pause();
+                song9.pause();
                 song7.play();
+                    
+                $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+                    
+                    $(this).find(".listen-pause").show();
+                    
+                }
                });
-             $("#box8").click(function(){
+            $("#box8").click(function() {
+            if (song8.duration > 0 && !song8.paused){
+                    song8.pause();
+                    
+                    
+                }
+                else{
+                song2.pause();
+                song3.pause();
+                song4.pause();
+                song5.pause();
+                song6.pause();
+                song7.pause();
+                song1.pause();
+                song9.pause();
                 song8.play();
+                    
+                $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+                    
+                    $(this).find(".listen-pause").show();
+                    
+                }
                });
-             $("#box9").click(function(){
+            $("#box9").click(function() {
+           if (song9.duration > 0 && !song9.paused){
+                    song9.pause();
+                    
+                    
+                }
+                else{
+                song2.pause();
+                song3.pause();
+                song4.pause();
+                song5.pause();
+                song6.pause();
+                song7.pause();
+                song8.pause();
+                song1.pause();
                 song9.play();
+                    
+                $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+                    
+                    $(this).find(".listen-pause").show();
+                    
+                }
                });
 
 
@@ -1484,6 +1683,7 @@ play_circle_filled
             #ffe0f0  similar to other theme but more opaque
             */
         });
+
     </script>
 </body>
 
