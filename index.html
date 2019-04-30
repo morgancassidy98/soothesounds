@@ -12,6 +12,7 @@
             font-family: 'Quicksand', sans-serif;
             user-select: none;
             overflow: hidden;
+            z-index: -2;
 
 
         }
@@ -23,7 +24,7 @@
             transform: translate(-50%, -50%);
             padding: 3em;
             display: none;
-            z-index: -1;
+            z-index: 1;
 
         }
 
@@ -34,6 +35,7 @@
             padding: .5em;
             font-size: 1em;
             border-radius: 10px;
+        
 
 
 
@@ -387,7 +389,7 @@
 
         }
 
-        #hide-selections {
+        #hide-selections, #show-selections {
             position: absolute;
             top: 95%;
             left: 1%;
@@ -400,6 +402,9 @@
 
 
 
+        }
+        #hide-selections{
+            display:none;
         }
 
         .box i {
@@ -562,6 +567,7 @@ play_circle_filled
 
     <div id="create-page">
         <div id="hide-selections">Hide Selections</div>
+        <div id="show-selections">Show Selections</div>
 
 
 
@@ -763,6 +769,14 @@ play_circle_filled
             });
             $("#hide-selections").click(function() {
                 $(".inner-list div").hide();
+                $("#hide-selections").hide();
+                $("#show-selections").show();
+
+            });
+             $("#show-selections").click(function() {
+                $(".inner-list div").show();
+                $(this).hide();
+                $("#hide-selections").show();
 
             });
 
@@ -770,6 +784,7 @@ play_circle_filled
             $("#listen").click(function() {
                 $(".title").hide();
                 $("#listen-page").show();
+                $("#create-page").hide();
                 $("header").show();
                 $("#listen-nav").css("background-color", "#bbdcfa");
                 $("#listen-nav-2").css("background-color", "#bbdcfa");
@@ -777,20 +792,32 @@ play_circle_filled
             });
             $("#create").click(function() {
                 $(".title").hide();
+                $("#listen-page").hide();
                 $("#create-page").show();
                 $("header").show();
                 $("#create-nav").css("background-color", "#bbdcfa");
                 $("#create-nav-2").css("background-color", "#bbdcfa");
+              
+                
 
 
             });
             $("#listen-nav").click(function() {
-                $("#listen-page").toggle();
-                $("#create-page").toggle();
+                $("#listen-page").show();
+                $("#create-page").hide();
             });
             $("#create-nav").click(function() {
-                $("#listen-page").toggle();
-                $("#create-page").toggle();
+                $("#listen-page").hide();
+                $("#create-page").show();
+                song1.pause();
+                song2.pause();
+                song3.pause();
+                song4.pause();
+                song5.pause();
+                song6.pause();
+                song7.pause();
+                song8.pause();
+                song9.pause();
             });
 
 
@@ -896,10 +923,7 @@ play_circle_filled
 
                 $(".inner-list").css("color", "black	");
                 $("#day-night").addClass("nightmode");
-                $(".option").mouseover(function() {
-                    $(this).css("background-color", "#e0f0ff");
-
-                })
+                
                 $(".help-box").css("color", "black");
 
 
@@ -915,9 +939,7 @@ play_circle_filled
 
                 $(".inner-list-button").css("background-color", "#d0f0c0");
                 $("#day-night").removeClass("nightmode");
-                $(".option").mouseover(function() {
-                    $(this).css("background-color", "#e0f0ff");
-                });
+            
 
             });
 
@@ -1437,11 +1459,11 @@ play_circle_filled
                     song8.pause();
                     song9.pause();
                     song1.play();
-                    
-                  $(".listen-pause").hide();
+
+                    $(".listen-pause").hide();
                     $(".listen-play").show();
                     $(this).find(".listen-play").hide();
-                    
+
                     $(this).find(".listen-pause").show();
 
                 }
@@ -1461,172 +1483,186 @@ play_circle_filled
                     song8.pause();
                     song9.pause();
                     song2.play();
-                    
+
                     $(".listen-pause").hide();
                     $(".listen-play").show();
                     $(this).find(".listen-play").hide();
-                    
+
                     $(this).find(".listen-pause").show();
 
                 }
             });
             $("#box3").click(function() {
-            if (song3.duration > 0 && !song3.paused){
+                if (song3.duration > 0 && !song3.paused) {
                     song3.pause();
-                    
-                    
-                }
-                else{
-                song2.pause();
-                song1.pause();
-                song4.pause();
-                song5.pause();
-                song6.pause();
-                song7.pause();
-                song8.pause();
-                song9.pause();
-                song3.play();
-                    
+
+
+                } else {
+                    song2.pause();
+                    song1.pause();
+                    song4.pause();
+                    song5.pause();
+                    song6.pause();
+                    song7.pause();
+                    song8.pause();
+                    song9.pause();
+                    song3.play();
+
                     $(".listen-pause").hide();
                     $(".listen-play").show();
                     $(this).find(".listen-play").hide();
-                    
+
                     $(this).find(".listen-pause").show();
-                    
+
                 }
-               });
+            });
             $("#box4").click(function() {
-         if (song4.duration > 0 && !song4.paused){
+                if (song4.duration > 0 && !song4.paused) {
                     song4.pause();
-                    
-                    
-                }
-                else{
-                song2.pause();
-                song3.pause();
-                song1.pause();
-                song5.pause();
-                song6.pause();
-                song7.pause();
-                song8.pause();
-                song9.pause();
-                song4.play();
-                    
-                $(".listen-pause").hide();
-                    $(".listen-play").show();
-                    $(this).find(".listen-play").hide();
-                    
-                    $(this).find(".listen-pause").show();
-                    
-                }
-               });
-            $("#box5").click(function() {
-             if (song5.duration > 0 && !song5.paused){
+
+
+                } else {
+                    song2.pause();
+                    song3.pause();
+                    song1.pause();
                     song5.pause();
-                    
-                    
-                }
-                else{
-                song2.pause();
-                song3.pause();
-                song4.pause();
-                song1.pause();
-                song6.pause();
-                song7.pause();
-                song8.pause();
-                song9.pause();
-                song5.play();
-                    
-                $(".listen-pause").hide();
-                    $(".listen-play").show();
-                    $(this).find(".listen-play").hide();
-                    
-                    $(this).find(".listen-pause").show();
-                    
-                }
-               });
-            $("#box6").click(function() {
-            if (song6.duration > 0 && !song6.paused){
                     song6.pause();
-                    
-                    
-                }
-                else{
-                song2.pause();
-                song3.pause();
-                song4.pause();
-                song5.pause();
-                song1.pause();
-                song7.pause();
-                song8.pause();
-                song9.pause();
-                song6.play();
-                    
-                $(".listen-pause").hide();
-                    $(".listen-play").show();
-                    $(this).find(".listen-play").hide();
-                    
-                    $(this).find(".listen-pause").show();
-                    
-                }
-               });
-            $("#box7").click(function() {
-            if (song7.duration > 0 && !song7.paused){
                     song7.pause();
-                    
-                    
-                }
-                else{
-                song2.pause();
-                song3.pause();
-                song4.pause();
-                song5.pause();
-                song6.pause();
-                song1.pause();
-                song8.pause();
-                song9.pause();
-                song7.play();
-                    
-                $(".listen-pause").hide();
-                    $(".listen-play").show();
-                    $(this).find(".listen-play").hide();
-                    
-                    $(this).find(".listen-pause").show();
-                    
-                }
-               });
-            $("#box8").click(function() {
-            if (song8.duration > 0 && !song8.paused){
                     song8.pause();
-                    
-                    
-                }
-                else{
-                song2.pause();
-                song3.pause();
-                song4.pause();
-                song5.pause();
-                song6.pause();
-                song7.pause();
-                song1.pause();
-                song9.pause();
-                song8.play();
-                    
-                $(".listen-pause").hide();
+                    song9.pause();
+                    song4.play();
+
+                    $(".listen-pause").hide();
                     $(".listen-play").show();
                     $(this).find(".listen-play").hide();
-                    
+
                     $(this).find(".listen-pause").show();
-                    
+
                 }
-               });
-            $("#box9").click(function() {
-           if (song9.duration > 0 && !song9.paused){
+            });
+            $("#box5").click(function() {
+                if (song5.duration > 0 && !song5.paused) {
+                    song5.pause();
+
+
+                } else {
+                    song2.pause();
+                    song3.pause();
+                    song4.pause();
+                    song1.pause();
+                    song6.pause();
+                    song7.pause();
+                    song8.pause();
                     song9.pause();
-                    
-                    
+                    song5.play();
+
+                    $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+
+                    $(this).find(".listen-pause").show();
+
                 }
-                else{
+            });
+            $("#box6").click(function() {
+                if (song6.duration > 0 && !song6.paused) {
+                    song6.pause();
+
+
+                } else {
+                    song2.pause();
+                    song3.pause();
+                    song4.pause();
+                    song5.pause();
+                    song1.pause();
+                    song7.pause();
+                    song8.pause();
+                    song9.pause();
+                    song6.play();
+
+                    $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+
+                    $(this).find(".listen-pause").show();
+
+                }
+            });
+            $("#box7").click(function() {
+                if (song7.duration > 0 && !song7.paused) {
+                    song7.pause();
+
+
+                } else {
+                    song2.pause();
+                    song3.pause();
+                    song4.pause();
+                    song5.pause();
+                    song6.pause();
+                    song1.pause();
+                    song8.pause();
+                    song9.pause();
+                    song7.play();
+
+                    $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+
+                    $(this).find(".listen-pause").show();
+
+                }
+            });
+            $("#box8").click(function() {
+                if (song8.duration > 0 && !song8.paused) {
+                    song8.pause();
+
+
+                } else {
+                    song2.pause();
+                    song3.pause();
+                    song4.pause();
+                    song5.pause();
+                    song6.pause();
+                    song7.pause();
+                    song1.pause();
+                    song9.pause();
+                    song8.play();
+
+                    $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+
+                    $(this).find(".listen-pause").show();
+
+                }
+            });
+            $("#box9").click(function() {
+                if (song9.duration > 0 && !song9.paused) {
+                    song9.pause();
+
+
+                } else {
+                    song2.pause();
+                    song3.pause();
+                    song4.pause();
+                    song5.pause();
+                    song6.pause();
+                    song7.pause();
+                    song8.pause();
+                    song1.pause();
+                    song9.play();
+
+                    $(".listen-pause").hide();
+                    $(".listen-play").show();
+                    $(this).find(".listen-play").hide();
+
+                    $(this).find(".listen-pause").show();
+
+                }
+            });
+              $("#create").click(function() {
+              
+                song1.pause();
                 song2.pause();
                 song3.pause();
                 song4.pause();
@@ -1634,17 +1670,10 @@ play_circle_filled
                 song6.pause();
                 song7.pause();
                 song8.pause();
-                song1.pause();
-                song9.play();
-                    
-                $(".listen-pause").hide();
-                    $(".listen-play").show();
-                    $(this).find(".listen-play").hide();
-                    
-                    $(this).find(".listen-pause").show();
-                    
-                }
-               });
+                song9.pause();
+
+
+            });
 
 
 
