@@ -67,7 +67,7 @@
         }
 
         .inner-list div {
-            display: none;
+            /*display: none;*/
             font-size: 1em;
         }
 
@@ -728,7 +728,7 @@ play_circle_filled
             $(".inner-list").click(function() {
                 //$(".inner-list div").hide();
                 $(this).show();
-                $(this).find('div').show();
+                $(this).find('div').toggle();
 
 
 
@@ -1220,6 +1220,9 @@ play_circle_filled
             });
 
             $("#section2-btn1").click(function() {
+                if (row2btn1.duration > 0 && !row2btn1.paused) {
+                    row2btn1.pause();
+                }else{
                 row2btn2.pause();
                 row2btn3.pause();
                 row2btn4.pause();
@@ -1228,9 +1231,13 @@ play_circle_filled
                 row2btn7.pause();
                 row2btn8.pause();
                 row2btn1.play();
+                }
 
             });
             $("#section2-btn2").click(function() {
+                if (row2btn2.duration > 0 && !row2btn2.paused) {
+                    row2btn2.pause();
+                }else{
 
                 row2btn3.pause();
                 row2btn4.pause();
@@ -1240,9 +1247,14 @@ play_circle_filled
                 row2btn8.pause();
                 row2btn1.pause();
                 row2btn2.play();
+                }
 
             });
             $("#section2-btn3").click(function() {
+                 if (row2btn3.duration > 0 && !row2btn3.paused) {
+                    row2btn3.pause();
+                }else{
+               
                 row2btn2.pause();
 
                 row2btn4.pause();
@@ -1252,9 +1264,13 @@ play_circle_filled
                 row2btn8.pause();
                 row2btn1.pause();
                 row2btn3.play();
+                }
 
             });
             $("#section2-btn4").click(function() {
+                if (row2btn4.duration > 0 && !row2btn4.paused) {
+                    row2btn4.pause();
+                }else{
                 row2btn2.pause();
                 row2btn3.pause();
 
@@ -1264,9 +1280,13 @@ play_circle_filled
                 row2btn8.pause();
                 row2btn1.pause();
                 row2btn4.play();
+                }
 
             });
             $("#section2-btn5").click(function() {
+                if (row2btn5.duration > 0 && !row2btn5.paused) {
+                    row2btn5.pause();
+                }else{
                 row2btn2.pause();
                 row2btn3.pause();
                 row2btn4.pause();
@@ -1276,9 +1296,13 @@ play_circle_filled
                 row2btn8.pause();
                 row2btn1.pause();
                 row2btn5.play();
+                }
 
             });
             $("#section2-btn6").click(function() {
+                if (row2btn6.duration > 0 && !row2btn6.paused) {
+                    row2btn6.pause();
+                }else{
                 row2btn2.pause();
                 row2btn3.pause();
                 row2btn4.pause();
@@ -1288,9 +1312,13 @@ play_circle_filled
                 row2btn8.pause();
                 row2btn1.pause();
                 row2btn6.play();
+                }
 
             });
             $("#section2-btn7").click(function() {
+                if (row2btn7.duration > 0 && !row2btn7.paused) {
+                    row2btn7.pause();
+                }else{
                 row2btn2.pause();
                 row2btn3.pause();
                 row2btn4.pause();
@@ -1300,9 +1328,13 @@ play_circle_filled
                 row2btn8.pause();
                 row2btn1.pause();
                 row2btn7.play();
+                }
 
             });
             $("#section2-btn8").click(function() {
+                if (row2btn8.duration > 0 && !row2btn8.paused) {
+                    row2btn8.pause();
+                }else{
                 row2btn2.pause();
                 row2btn3.pause();
                 row2btn4.pause();
@@ -1312,6 +1344,7 @@ play_circle_filled
 
                 row2btn1.pause();
                 row2btn8.play();
+                }
 
             });
 
