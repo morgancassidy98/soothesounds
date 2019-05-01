@@ -513,47 +513,47 @@
 play_circle_filled
 </i> <i class="material-icons listen-pause" id="listen-pause-1">
                         pause_circle_outline
-                    </i>Summer Day</div>
+                    </i>Slow Synth</div>
             <div class="box" id="box2"><i class="material-icons listen-play">
 play_circle_filled
 </i><i class="material-icons listen-pause" id="listen-pause-2">
                         pause_circle_outline
-                    </i>Spring Day</div>
+                    </i>Video Game on a Rainy Day</div>
             <div class="box" id="box3"><i class="material-icons listen-play">
 play_circle_filled
 </i><i class="material-icons listen-pause" id="listen-pause-3">
                         pause_circle_outline
-                    </i>Calm Winds</div>
+                    </i>Mid-tempo Synth</div>
             <div class="box" id="box4"><i class="material-icons listen-play">
 play_circle_filled
 </i><i class="material-icons listen-pause" id="listen-pause-4">
                         pause_circle_outline
-                    </i>Babbling Brook</div>
+                    </i>Pensive Piano</div>
             <div class="box" id="box5"><i class="material-icons listen-play">
 play_circle_filled
 </i><i class="material-icons listen-pause" id="listen-pause-5">
                         pause_circle_outline
-                    </i>Chirping Meadow</div>
+                    </i>Smooth Jazz 1</div>
             <div class="box" id="box6"><i class="material-icons listen-play">
 play_circle_filled
 </i><i class="material-icons listen-pause" id="listen-pause-6">
                         pause_circle_outline
-                    </i>Peaceful Walk</div>
+                    </i>Optimistic Soundtrack</div>
             <div class="box" id="box7"><i class="material-icons listen-play">
 play_circle_filled
 </i><i class="material-icons listen-pause" id="listen-pause-7">
                         pause_circle_outline
-                    </i>Nighttime</div>
+                    </i>Smooth Jazz 2</div>
             <div class="box" id="box8"><i class="material-icons listen-play">
 play_circle_filled
 </i><i class="material-icons listen-pause" id="listen-pause-8">
                         pause_circle_outline
-                    </i>Breathe</div>
+                    </i>Smooth Jazz 3</div>
             <div class="box" id="box9"><i class="material-icons listen-play">
 play_circle_filled
 </i><i class="material-icons listen-pause" id="listen-pause-9">
                         pause_circle_outline
-                    </i>Laughter</div>
+                    </i>Soft Piano</div>
 
 
 
@@ -689,6 +689,9 @@ play_circle_filled
         <div class="help-box" id="download-help">
             Download your recording.
         </div>
+        <div class="help-box" id="setup-help">
+            Select your sounds on the left to get started.
+        </div>
     </div>
 
 
@@ -794,6 +797,8 @@ play_circle_filled
                 $(".title").hide();
                 $("#listen-page").hide();
                 $("#create-page").show();
+                 $("#setup-help").show();
+                $("#setup-help").fadeOut(5000);
                 $("header").show();
                 $("#create-nav").css("background-color", "#bbdcfa");
                 $("#create-nav-2").css("background-color", "#bbdcfa");
@@ -809,6 +814,8 @@ play_circle_filled
             $("#create-nav").click(function() {
                 $("#listen-page").hide();
                 $("#create-page").show();
+                $("#setup-help").show();
+                $("#setup-help").fadeOut(5000);
                 song1.pause();
                 song2.pause();
                 song3.pause();
