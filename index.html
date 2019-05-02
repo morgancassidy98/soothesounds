@@ -35,7 +35,7 @@
             padding: .5em;
             font-size: 1em;
             border-radius: 10px;
-        
+
 
 
 
@@ -261,7 +261,7 @@
             position: absolute;
             left: 0;
 
-            margin-top: 7em;
+            margin-top: 8em;
             /*top: 50%;
             left: 50%;*/
             margin-left: auto;
@@ -386,14 +386,15 @@
             text-align: center;
             display: none;
             font-size: 2em;
-            padding-top:5%;
-            padding-bottom:5%;
-         ;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            ;
 
 
         }
 
-        #hide-selections, #show-selections {
+        #hide-selections,
+        #show-selections {
             position: absolute;
             top: 95%;
             left: 1%;
@@ -407,8 +408,9 @@
 
 
         }
-        #show-selections{
-            display:none;
+
+        #show-selections {
+            display: none;
         }
 
         .box i {
@@ -469,7 +471,6 @@
                 color: white;
             }
         }
-
     </style>
 </head>
 
@@ -514,50 +515,50 @@
 
         <div id="playlist">
             <div class="box" id="box1"><i class="material-icons listen-play">
-play_circle_filled
-</i> <i class="material-icons listen-pause" id="listen-pause-1">
-                        pause_circle_outline
-                    </i>Slow Synth</div>
+                    play_circle_filled
+                </i> <i class="material-icons listen-pause" id="listen-pause-1">
+                    pause_circle_outline
+                </i>Slow Synth</div>
             <div class="box" id="box2"><i class="material-icons listen-play">
-play_circle_filled
-</i><i class="material-icons listen-pause" id="listen-pause-2">
-                        pause_circle_outline
-                    </i>Video Game on a Rainy Day</div>
+                    play_circle_filled
+                </i><i class="material-icons listen-pause" id="listen-pause-2">
+                    pause_circle_outline
+                </i>Video Game on a Rainy Day</div>
             <div class="box" id="box3"><i class="material-icons listen-play">
-play_circle_filled
-</i><i class="material-icons listen-pause" id="listen-pause-3">
-                        pause_circle_outline
-                    </i>Mid-tempo Synth</div>
+                    play_circle_filled
+                </i><i class="material-icons listen-pause" id="listen-pause-3">
+                    pause_circle_outline
+                </i>Mid-tempo Synth</div>
             <div class="box" id="box4"><i class="material-icons listen-play">
-play_circle_filled
-</i><i class="material-icons listen-pause" id="listen-pause-4">
-                        pause_circle_outline
-                    </i>Pensive Piano</div>
+                    play_circle_filled
+                </i><i class="material-icons listen-pause" id="listen-pause-4">
+                    pause_circle_outline
+                </i>Pensive Piano</div>
             <div class="box" id="box5"><i class="material-icons listen-play">
-play_circle_filled
-</i><i class="material-icons listen-pause" id="listen-pause-5">
-                        pause_circle_outline
-                    </i>Smooth Jazz 1</div>
+                    play_circle_filled
+                </i><i class="material-icons listen-pause" id="listen-pause-5">
+                    pause_circle_outline
+                </i>Smooth Jazz 1</div>
             <div class="box" id="box6"><i class="material-icons listen-play">
-play_circle_filled
-</i><i class="material-icons listen-pause" id="listen-pause-6">
-                        pause_circle_outline
-                    </i>Optimistic Soundtrack</div>
+                    play_circle_filled
+                </i><i class="material-icons listen-pause" id="listen-pause-6">
+                    pause_circle_outline
+                </i>Optimistic Soundtrack</div>
             <div class="box" id="box7"><i class="material-icons listen-play">
-play_circle_filled
-</i><i class="material-icons listen-pause" id="listen-pause-7">
-                        pause_circle_outline
-                    </i>Smooth Jazz 2</div>
+                    play_circle_filled
+                </i><i class="material-icons listen-pause" id="listen-pause-7">
+                    pause_circle_outline
+                </i>Smooth Jazz 2</div>
             <div class="box" id="box8"><i class="material-icons listen-play">
-play_circle_filled
-</i><i class="material-icons listen-pause" id="listen-pause-8">
-                        pause_circle_outline
-                    </i>Smooth Jazz 3</div>
+                    play_circle_filled
+                </i><i class="material-icons listen-pause" id="listen-pause-8">
+                    pause_circle_outline
+                </i>Smooth Jazz 3</div>
             <div class="box" id="box9"><i class="material-icons listen-play">
-play_circle_filled
-</i><i class="material-icons listen-pause" id="listen-pause-9">
-                        pause_circle_outline
-                    </i>Soft Piano</div>
+                    play_circle_filled
+                </i><i class="material-icons listen-pause" id="listen-pause-9">
+                    pause_circle_outline
+                </i>Soft Piano</div>
 
 
 
@@ -780,7 +781,7 @@ play_circle_filled
                 $("#show-selections").show();
 
             });
-             $("#show-selections").click(function() {
+            $("#show-selections").click(function() {
                 $(".inner-list div").show();
                 $(this).hide();
                 $("#hide-selections").show();
@@ -801,13 +802,13 @@ play_circle_filled
                 $(".title").hide();
                 $("#listen-page").hide();
                 $("#create-page").show();
-                 $("#setup-help").show();
+                $("#setup-help").show();
                 $("#setup-help").fadeOut(5000);
                 $("header").show();
                 $("#create-nav").css("background-color", "#bbdcfa");
                 $("#create-nav-2").css("background-color", "#bbdcfa");
-              
-                
+
+
 
 
             });
@@ -934,7 +935,7 @@ play_circle_filled
 
                 $(".inner-list").css("color", "black	");
                 $("#day-night").addClass("nightmode");
-                
+
                 $(".help-box").css("color", "black");
 
 
@@ -950,7 +951,7 @@ play_circle_filled
 
                 $(".inner-list-button").css("background-color", "#d0f0c0");
                 $("#day-night").removeClass("nightmode");
-            
+
 
             });
 
@@ -1175,33 +1176,21 @@ play_circle_filled
                         row1btn4.play();
                     }, 4500);
                     */
-                     $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
-                    setTimeout(function() {
-                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
-                    }, 1000);
-                     setTimeout(function() {
-                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
-                    }, 2000);
-                     setTimeout(function() {
-                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
-                    }, 3000);
-                     setTimeout(function() {
-                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
-                    }, 4000);
-                     setTimeout(function() {
-                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
-                    }, 5000);
-                     setTimeout(function() {
-                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
-                    }, 6000);
-                     setTimeout(function() {
-                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
-                    }, 7000);
-                     setTimeout(function() {
-                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
-                    }, 8000);
-                 
+                    console.log("clicked");
+                    var time=0;
+                    var i=0;
                     
+                   // console.log($(".music-btn").eq(1));
+                    while(i<=16){
+                    setTimeout(function() {
+                        $(".music-btn").eq(1 + Math.floor(Math.random() * 32)).click();
+                    }, time);
+                        time+=Math.floor((Math.random() * 4000) + 500);
+                        i+=1;
+                       
+                    }
+                  
+
 
 
 
@@ -1293,128 +1282,128 @@ play_circle_filled
             $("#section2-btn1").click(function() {
                 if (row2btn1.duration > 0 && !row2btn1.paused) {
                     row2btn1.pause();
-                }else{
-                row2btn2.pause();
-                row2btn3.pause();
-                row2btn4.pause();
-                row2btn5.pause();
-                row2btn6.pause();
-                row2btn7.pause();
-                row2btn8.pause();
-                row2btn1.play();
+                } else {
+                    row2btn2.pause();
+                    row2btn3.pause();
+                    row2btn4.pause();
+                    row2btn5.pause();
+                    row2btn6.pause();
+                    row2btn7.pause();
+                    row2btn8.pause();
+                    row2btn1.play();
                 }
 
             });
             $("#section2-btn2").click(function() {
                 if (row2btn2.duration > 0 && !row2btn2.paused) {
                     row2btn2.pause();
-                }else{
+                } else {
 
-                row2btn3.pause();
-                row2btn4.pause();
-                row2btn5.pause();
-                row2btn6.pause();
-                row2btn7.pause();
-                row2btn8.pause();
-                row2btn1.pause();
-                row2btn2.play();
+                    row2btn3.pause();
+                    row2btn4.pause();
+                    row2btn5.pause();
+                    row2btn6.pause();
+                    row2btn7.pause();
+                    row2btn8.pause();
+                    row2btn1.pause();
+                    row2btn2.play();
                 }
 
             });
             $("#section2-btn3").click(function() {
-                 if (row2btn3.duration > 0 && !row2btn3.paused) {
+                if (row2btn3.duration > 0 && !row2btn3.paused) {
                     row2btn3.pause();
-                }else{
-               
-                row2btn2.pause();
+                } else {
 
-                row2btn4.pause();
-                row2btn5.pause();
-                row2btn6.pause();
-                row2btn7.pause();
-                row2btn8.pause();
-                row2btn1.pause();
-                row2btn3.play();
+                    row2btn2.pause();
+
+                    row2btn4.pause();
+                    row2btn5.pause();
+                    row2btn6.pause();
+                    row2btn7.pause();
+                    row2btn8.pause();
+                    row2btn1.pause();
+                    row2btn3.play();
                 }
 
             });
             $("#section2-btn4").click(function() {
                 if (row2btn4.duration > 0 && !row2btn4.paused) {
                     row2btn4.pause();
-                }else{
-                row2btn2.pause();
-                row2btn3.pause();
+                } else {
+                    row2btn2.pause();
+                    row2btn3.pause();
 
-                row2btn5.pause();
-                row2btn6.pause();
-                row2btn7.pause();
-                row2btn8.pause();
-                row2btn1.pause();
-                row2btn4.play();
+                    row2btn5.pause();
+                    row2btn6.pause();
+                    row2btn7.pause();
+                    row2btn8.pause();
+                    row2btn1.pause();
+                    row2btn4.play();
                 }
 
             });
             $("#section2-btn5").click(function() {
                 if (row2btn5.duration > 0 && !row2btn5.paused) {
                     row2btn5.pause();
-                }else{
-                row2btn2.pause();
-                row2btn3.pause();
-                row2btn4.pause();
+                } else {
+                    row2btn2.pause();
+                    row2btn3.pause();
+                    row2btn4.pause();
 
-                row2btn6.pause();
-                row2btn7.pause();
-                row2btn8.pause();
-                row2btn1.pause();
-                row2btn5.play();
+                    row2btn6.pause();
+                    row2btn7.pause();
+                    row2btn8.pause();
+                    row2btn1.pause();
+                    row2btn5.play();
                 }
 
             });
             $("#section2-btn6").click(function() {
                 if (row2btn6.duration > 0 && !row2btn6.paused) {
                     row2btn6.pause();
-                }else{
-                row2btn2.pause();
-                row2btn3.pause();
-                row2btn4.pause();
-                row2btn5.pause();
+                } else {
+                    row2btn2.pause();
+                    row2btn3.pause();
+                    row2btn4.pause();
+                    row2btn5.pause();
 
-                row2btn7.pause();
-                row2btn8.pause();
-                row2btn1.pause();
-                row2btn6.play();
+                    row2btn7.pause();
+                    row2btn8.pause();
+                    row2btn1.pause();
+                    row2btn6.play();
                 }
 
             });
             $("#section2-btn7").click(function() {
                 if (row2btn7.duration > 0 && !row2btn7.paused) {
                     row2btn7.pause();
-                }else{
-                row2btn2.pause();
-                row2btn3.pause();
-                row2btn4.pause();
-                row2btn5.pause();
-                row2btn6.pause();
+                } else {
+                    row2btn2.pause();
+                    row2btn3.pause();
+                    row2btn4.pause();
+                    row2btn5.pause();
+                    row2btn6.pause();
 
-                row2btn8.pause();
-                row2btn1.pause();
-                row2btn7.play();
+                    row2btn8.pause();
+                    row2btn1.pause();
+                    row2btn7.play();
                 }
 
             });
             $("#section2-btn8").click(function() {
                 if (row2btn8.duration > 0 && !row2btn8.paused) {
                     row2btn8.pause();
-                }else{
-                row2btn2.pause();
-                row2btn3.pause();
-                row2btn4.pause();
-                row2btn5.pause();
-                row2btn6.pause();
-                row2btn7.pause();
+                } else {
+                    row2btn2.pause();
+                    row2btn3.pause();
+                    row2btn4.pause();
+                    row2btn5.pause();
+                    row2btn6.pause();
+                    row2btn7.pause();
 
-                row2btn1.pause();
-                row2btn8.play();
+                    row2btn1.pause();
+                    row2btn8.play();
                 }
 
             });
@@ -1764,8 +1753,8 @@ play_circle_filled
 
                 }
             });
-              $("#create").click(function() {
-              
+            $("#create").click(function() {
+
                 song1.pause();
                 song2.pause();
                 song3.pause();
@@ -1816,7 +1805,6 @@ play_circle_filled
             #ffe0f0  similar to other theme but more opaque
             */
         });
-
     </script>
 </body>
 
