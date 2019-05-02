@@ -377,7 +377,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 10%;
+            width: 20%;
             height: 10%;
             padding: 1em;
             border-radius: 10px;
@@ -385,6 +385,10 @@
             opacity: .7;
             text-align: center;
             display: none;
+            font-size: 2em;
+            padding-top:5%;
+            padding-bottom:5%;
+         ;
 
 
         }
@@ -403,7 +407,7 @@
 
 
         }
-        #hide-selections{
+        #show-selections{
             display:none;
         }
 
@@ -1148,7 +1152,7 @@ play_circle_filled
                         $("#section1-btn3").click();
                     }, 1000);*/
                     //try alternating? chaining? different functions for different sequences
-                    row1btn1.play();
+                    /*row1btn1.play();
                     setTimeout(function() {
                         row1btn2.play();
                     }, 1000);
@@ -1170,6 +1174,34 @@ play_circle_filled
                     setTimeout(function() {
                         row1btn4.play();
                     }, 4500);
+                    */
+                     $( ".music-btn:eq(1 + Math.floor(Math.random() * 32))" ).click();
+                    setTimeout(function() {
+                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
+                    }, 1000);
+                     setTimeout(function() {
+                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
+                    }, 2000);
+                     setTimeout(function() {
+                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
+                    }, 3000);
+                     setTimeout(function() {
+                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
+                    }, 4000);
+                     setTimeout(function() {
+                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
+                    }, 5000);
+                     setTimeout(function() {
+                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
+                    }, 6000);
+                     setTimeout(function() {
+                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
+                    }, 7000);
+                     setTimeout(function() {
+                        $(".music-btn:eq(1 + Math.floor(Math.random() * 32))").click();
+                    }, 8000);
+                 
+                    
 
 
 
@@ -1183,6 +1215,38 @@ play_circle_filled
                 } else {
                     //stop playing song
                     console.log("no click");
+                    row1btn1.pause();
+                    row1btn2.pause();
+                    row1btn3.pause();
+                    row1btn4.pause();
+                    row1btn5.pause();
+                    row1btn6.pause();
+                    row1btn7.pause();
+                    row1btn8.pause();
+                    row2btn1.pause();
+                    row2btn2.pause();
+                    row2btn3.pause();
+                    row2btn4.pause();
+                    row2btn5.pause();
+                    row2btn6.pause();
+                    row2btn7.pause();
+                    row2btn8.pause();
+                    row3btn1.pause();
+                    row3btn2.pause();
+                    row3btn3.pause();
+                    row3btn4.pause();
+                    row3btn5.pause();
+                    row3btn6.pause();
+                    row3btn7.pause();
+                    row3btn8.pause();
+                    row4btn1.pause();
+                    row4btn2.pause();
+                    row4btn3.pause();
+                    row4btn4.pause();
+                    row4btn5.pause();
+                    row4btn6.pause();
+                    row4btn7.pause();
+                    row4btn8.pause();
 
 
 
